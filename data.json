@@ -1,0 +1,212 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Doublefile Viburnum",
+      "price": 67.45,
+      "rating": 5,
+      "image-primary": "/assets/images/product/product-primary-1.png",
+      "image-secondary": "/assets/images/product/product-secondary-1.png",
+      "featured": true,
+      "sold": 120,
+      "created_at": "2025-03-10"
+    },
+    {
+      "id": 2,
+      "name": "Feather Reed Grass",
+      "price": 20.0,
+      "rating": 5,
+      "image-primary": "/assets/images/product/product-primary-2.png",
+      "image-secondary": "/assets/images/product/product-secondary-2.png",
+      "featured": true,
+      "sold": 300,
+      "created_at": "2025-03-10"
+    },
+    {
+      "id": 3,
+      "name": "American Marigold",
+      "price": 23.45,
+      "rating": 5,
+      "image-primary": "/assets/images/product/product-primary-3.png",
+      "image-secondary": "/assets/images/product/product-secondary-3.png",
+      "featured": true,
+      "sold": 150,
+      "created_at": "2025-03-10"
+    },
+    {
+      "id": 4,
+      "name": "Black Eyed Susan",
+      "price": 25.45,
+      "rating": 5,
+      "image-primary": "/assets/images/product/product-primary-4.png",
+      "image-secondary": "/assets/images/product/product-secondary-4.png",
+      "featured": true,
+      "sold": 120,
+      "created_at": "2025-03-10"
+    },
+    {
+      "id": 5,
+      "name": "Butterfly Weed",
+      "price": 50.45,
+      "rating": 5,
+      "image-primary": "/assets/images/product/product-primary-5.png",
+      "image-secondary": "/assets/images/product/product-secondary-5.png",
+      "featured": true,
+      "sold": 140,
+      "created_at": "2025-03-10"
+    },
+    {
+      "id": 6,
+      "name": "Common Yarrow",
+      "price": 65.0,
+      "rating": 5,
+      "image-primary": "/assets/images/product/product-primary-6.png",
+      "image-secondary": "/assets/images/product/product-secondary-6.png",
+      "featured": true,
+      "sold": 100,
+      "created_at": "2025-03-10"
+    },
+    {
+      "id": 7,
+      "name": "Bleeding Heart",
+      "price": 30.45,
+      "rating": 5,
+      "image-primary": "/assets/images/product/product-primary-7.png",
+      "image-secondary": "/assets/images/product/product-secondary-7.png",
+      "featured": true,
+      "sold": 100,
+      "created_at": "2025-03-10"
+    },
+    {
+      "id": 8,
+      "name": "Bloody Cranesbill",
+      "price": 45.0,
+      "rating": 5,
+      "image-primary": "/assets/images/product/product-primary-8.png",
+      "image-secondary": "/assets/images/product/product-secondary-8.png",
+      "featured": true,
+      "sold": 20,
+      "created_at": "2025-03-10"
+    },
+    {
+      "id": 9,
+      "name": "Common Bluebell",
+      "price": 15.45,
+      "rating": 5,
+      "image-primary": "/assets/images/product/product-primary-9.png",
+      "image-secondary": "/assets/images/product/product-secondary-9.png",
+      "featured": false,
+      "sold": 0,
+      "created_at": "2025-03-20"
+    },
+    {
+      "id": 10,
+      "name": "Common Foxglove",
+      "price": 35.45,
+      "rating": 5,
+      "image-primary": "/assets/images/product/product-primary-10.png",
+      "image-secondary": "/assets/images/product/product-secondary-10.png",
+      "featured": true,
+      "sold": 0,
+      "created_at": "2025-03-20"
+    },
+    {
+      "id": 11,
+      "name": "Common Lilac",
+      "price": 55.45,
+      "rating": 4,
+      "image-primary": "/assets/images/product/product-primary-11.png",
+      "image-secondary": "/assets/images/product/product-secondary-11.png",
+      "featured": false,
+      "sold": 0,
+      "created_at": "2025-03-20"
+    },
+    {
+      "id": 12,
+      "name": "Common Milkweed",
+      "price": 25.45,
+      "rating": 4,
+      "image-primary": "/assets/images/product/product-primary-12.png",
+      "image-secondary": "/assets/images/product/product-secondary-12.png",
+      "featured": false,
+      "sold": 0,
+      "created_at": "2025-03-20"
+    },
+    {
+      "id": 13,
+      "name": "Common Snowdrop",
+      "price": 45.45,
+      "rating": 4,
+      "image-primary": "/assets/images/product/product-primary-13.png",
+      "image-secondary": "/assets/images/product/product-secondary-13.png",
+      "featured": false,
+      "sold": 0,
+      "created_at": "2025-03-20"
+    },
+    {
+      "id": 14,
+      "name": "Common Speedwell",
+      "price": 65.45,
+      "rating": 4,
+      "image-primary": "/assets/images/product/product-primary-14.png",
+      "image-secondary": "/assets/images/product/product-secondary-14.png",
+      "featured": false,
+      "sold": 0,
+      "created_at": "2025-03-20"
+    },
+    {
+      "id": 15,
+      "name": "Common Toadflax",
+      "price": 85.45,
+      "rating": 4,
+      "image-primary": "/assets/images/product/product-primary-15.png",
+      "image-secondary": "/assets/images/product/product-secondary-15.png",
+      "featured": false,
+      "sold": 0,
+      "created_at": "2025-03-20"
+    },
+    {
+      "id": 16,
+      "name": "Common Vetch",
+      "price": 95.45,
+      "rating": 4,
+      "image-primary": "/assets/images/product/product-primary-16.png",
+      "image-secondary": "/assets/images/product/product-secondary-16.png",
+      "featured": false,
+      "sold": 0,
+      "created_at": "2025-03-20"
+    },
+    {
+      "id": 17,
+      "name": "Common Yarrow",
+      "price": 105.45,
+      "rating": 4,
+      "image-primary": "/assets/images/product/product-primary-17.png",
+      "image-secondary": "/assets/images/product/product-secondary-17.png",
+      "featured": false,
+      "sold": 0,
+      "created_at": "2025-03-20"
+    }
+  ],
+
+  "clients": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "/assets/images/client-1.png"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "/assets/images/client-2.png"
+    },
+    {
+      "id": 3,
+      "name": "Michael Johnson",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "image": "/assets/images/client-3.png"
+    }
+  ]
+}
