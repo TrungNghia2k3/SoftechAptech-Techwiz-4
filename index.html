@@ -4,59 +4,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/img/favicon.png">
-    <title>Home Page</title>
+    <link rel="icon" href="/assets/images/logo.png">
+    <title>Pronia - Plant Shop</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/base.responsive.css">
+    <link rel="stylesheet" href="/css/index.responsive.css">    
 </head>
 
 <body>
-    <!-- Begin Header -->
-    <header>
-        <div class="header-top">
-            <div class="content">
-                <div class="header-top-left">
-                    <p>hello everyone! 25% off all products</p>
-                </div>
-                <div class="header-top-right">
+    <!-- Checkbox toggle -->
+    <input type="checkbox" id="check" />
+
+    <!-- Nút mở sidebar cho điện thoại -->
+    <label for="check" class="checkbtn">
+        <i class="bi bi-list"></i>
+    </label>
+
+    <!-- Sidebar menu -->
+    <div class="sidebar-menu">
+        <!-- Nút đóng -->
+        <label for="check" class="close-btn">
+            <i class="bi bi-x"></i>
+        </label>
+
+        <div class="sidebar-menu-contact">
+            <div class="contact-icon">
+                <i class="bi bi-telephone"></i>
+            </div>
+            <p>+00 123 456 789</p>
+        </div>
+
+        <div class="sidebar-user-info">
+            <ul class="sidebar-user-info-list">
+                <li class="sidebar-user-info-item">
                     <div class="dropdown">
-                        <button onclick="toggleDropdown('currencyDropdown')" class="dropbtn">USD
+                        <button onclick="toggleDropdown(this)" class="dropbtn" data-id="language">English
                             <i class="bi bi-chevron-down"></i>
                         </button>
-                        <div id="currencyDropdown" class="dropdown-content">
-                            <a href="#">GBP</a>
-                            <a href="#">ISO</a>
-                        </div>
+
+                        <ul class="dropdown-content" data-id="language">
+                            <li><a href="#">French</a></li>
+                            <li><a href="#">Italian</a></li>
+                            <li><a href="#">Spanish</a></li>
+                        </ul>
                     </div>
+                </li>
+                <li class="sidebar-user-info-item">
                     <div class="dropdown">
-                        <button onclick="toggleDropdown('languageDropdown')" class="dropbtn">English
+                        <button onclick="toggleDropdown(this)" class="dropbtn" data-id="currency">USD
                             <i class="bi bi-chevron-down"></i>
                         </button>
-                        <div id="languageDropdown" class="dropdown-content">
-                            <a href="#">French</a>
-                            <a href="#">Italian</a>
-                            <a href="#">Spanish</a>
+
+                        <ul class="dropdown-content" data-id="currency">
+                            <li><a href="#">GBP</a></li>
+                            <li><a href="#">ISO</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="sidebar-user-info-item">
+                    <i class="bi bi-people"></i>
+                </li>
+                <li class="sidebar-user-info-item">
+                    <i class="bi bi-heart"></i>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="sidebar-menu-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
+            <li><a href="/faq">FAQ</a></li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <header id="main-header">
+        <!-- Phần header ban đầu -->
+        <div class="header-main">
+            <div class="header-top">
+                <div class="content">
+                    <div class="header-top-left">
+                        <p>hello everyone! 25% off all products</p>
+                    </div>
+                    <div class="header-top-right">
+                        <div class="dropdown">
+                            <button onclick="toggleDropdown(this)" class="dropbtn" data-id="currency">USD
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content" data-id="currency">
+                                <a href="#">GBP</a>
+                                <a href="#">ISO</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button onclick="toggleDropdown(this)" class="dropbtn" data-id="language">English
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-content" data-id="language">
+                                <a href="#">French</a>
+                                <a href="#">Italian</a>
+                                <a href="#">Spanish</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="header-middle">
-            <div class="content">
-                <div class="header-middle-contact">
-                    <div class="contact-icon">
-                        <i class="bi bi-telephone"></i>
+            <div class="header-middle">
+                <div class="content">
+                    <div class="header-middle-left">
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <p>+00 123 456 789</p>
                     </div>
-                    <p>+00 123 456 789</p>
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="/assets/images/logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="header-icon">
+                        <i class="bi bi-search"></i>
+                        <i class="bi bi-people"></i>
+                        <i class="bi bi-heart"></i>
+                        <div class="shopping-cart">
+                            <i class="bi bi-cart"></i>
+                            <span class="cart-count"></span>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="header-bottom">
+                <div class="content">
+                    <nav class="navbar">
+                        <ul class="navbar-list">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/shop">Shop</a></li>
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/contact-us">Contact Us</a></li>
+                            <li><a href="/faq">FAQ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
 
-                <div class="logo">
+        <!-- Header sticky -->
+        <div class="header-sticky" id="sticky-header">
+            <div class="content">
+                <div class="header-sticky-left">
                     <a href="index.html">
                         <img src="/assets/images/logo.png" alt="">
                     </a>
                 </div>
-
-                <div class="header-middle-right">
+                <div class="header-sticky-center">
+                    <nav class="navbar">
+                        <ul class="navbar-list">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/shop">Shop</a></li>
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/contact-us">Contact Us</a></li>
+                            <li><a href="/faq">FAQ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-icon">
                     <i class="bi bi-search"></i>
                     <i class="bi bi-people"></i>
                     <i class="bi bi-heart"></i>
@@ -67,24 +186,10 @@
                 </div>
             </div>
         </div>
-        <div class="header-bottom">
-            <div class="content">
-                <nav class="navbar">
-                    <ul class="navbar-list">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/shop">Shop</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/contact-us">Contact Us</a></li>
-                        <li><a href="/faq">FAQ</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
     </header>
-    <!-- End Header -->
+    <!-- Header -->
 
-    <!-- Begin carousel -->
+    <!-- Carousel -->
     <section class="carousel">
         <div class="slider">
             <div class="slide active">
@@ -93,7 +198,9 @@
                         <span class="offer">65% OFF</span>
                         <h2 class="title">NEW PLANT</h2>
                         <p class="short-description">Pronia, With 100% Natural, Organic & Plant Shop.</p>
-                        <button class="btn">Discover Now</button>
+                        <button class="btn btn-primary content-left-btn">
+                            <a href="#">Discover Now</a>
+                        </button>
                     </div>
                     <div class="content-right">
                         <img src="/assets/images/slide-1.png" alt="Slide 1">
@@ -106,7 +213,9 @@
                         <span class="offer">65% OFF</span>
                         <h2 class="title">NEW PLANT</h2>
                         <p class="short-description">Pronia, With 100% Natural, Organic & Plant Shop.</p>
-                        <button class="btn">Discover Now</button>
+                        <button class="btn btn-primary content-left-btn">
+                            <a href="#">Discover Now</a>
+                        </button>
                     </div>
                     <div class="content-right">
                         <img src="/assets/images/slide-2.png" alt="Slide 2">
@@ -118,9 +227,9 @@
             <button class="next" onclick="changeSlide(1)">&#10095;</button>
         </div>
     </section>
-    <!-- End carousel -->
+    <!-- Carousel -->
 
-    <!-- Begin shipping area -->
+    <!-- Shipping area -->
     <section class="shipping-area">
         <div class="content">
             <div class="shipping-item">
@@ -152,11 +261,12 @@
             </div>
         </div>
     </section>
-    <!-- End shipping area -->
-    <!-- Begin product area -->
+    <!-- Shipping area -->
+
+    <!-- Product area -->
     <section class="product-area">
         <div class="content">
-            <div class="title">
+            <div class="section-title">
                 <h2>Our Products</h2>
             </div>
 
@@ -172,10 +282,224 @@
             <div class="product-tab-content" id="tabContent"></div>
         </div>
     </section>
-    <!-- End product area -->
+    <!-- Product area -->
 
+    <!-- Banner area -->
+    <section class="banner-area">
+        <div class="content">
+            <div class="banner-item img-hover-effect banner-one">
+                <div class="banner-img">
+                    <img src="/assets/images/banner-1.png" alt="Banner 1">
+                </div>
+                <div class="banner-content text-position-left">
+                    <span class="collection">Collection Of Cactus</span>
+                    <h3 class="title">Pottery Pots &
+                        <br> Plant
+                    </h3>
+                    <button class="btn btn-primary btn-banner">
+                        <a href="#">Shop Now</a>
+                    </button>
+                </div>
+            </div>
 
-    <script src="main.js"></script>
+            <div class="banner-item img-hover-effect banner-two">
+                <div class="banner-img">
+                    <img src="/assets/images/banner-2.png" alt="Banner 2" class="img-responsive">
+                </div>
+                <div class="banner-content text-position-center">
+                    <span class="collection">New Collection</span>
+                    <h3 class="title">Plant Port</h3>
+                    <button class="btn btn-primary btn-banner">
+                        <a href="#">Shop Now</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="banner-item img-hover-effect banner-three">
+                <div class="banner-img">
+                    <img src="/assets/images/banner-3.png" alt="Banner 3" class="img-responsive">
+                </div>
+                <div class="banner-content text-position-center">
+                    <span class="collection">New Collection</span>
+                    <h3 class="title">Plant Port</h3>
+                    <button class="btn btn-primary btn-banner">
+                        <a href="#">Shop Now</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="banner-item img-hover-effect banner-four">
+                <div class="banner-img">
+                    <img src="/assets/images/banner-4.png" alt="Banner 4">
+                </div>
+                <div class="banner-content text-position-left">
+                    <span class="collection">Collection Of Cactus</span>
+                    <h3 class="title">Hanging Pots &
+                        <br> Plant
+                    </h3>
+                    <button class="btn btn-primary btn-banner">
+                        <a href="#">Shop Now</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner area -->
+
+    <!-- New products area -->
+    <div class="new-products">
+        <div class="content">
+            <div class="section-title">
+                <h2>New Products</h2>
+            </div>
+            <p class="section-desc">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                roots in a piece of classical Latin literature
+            </p>
+
+            <div class="new-products-list" id="new-products-list"></div>
+        </div>
+    </div>
+    <!-- New products area -->
+
+    <!-- Testimonial area -->
+    <section class="testimonial-area">
+        <div class="testimonial-bg">
+            <div class="section-title">
+                <h2>What Say Client</h2>
+            </div>
+            <p class="section-desc">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                roots in a piece of classical Latin literature
+            </p>
+        </div>
+        <div class="content">
+            <div class="testimonial-list" id="testimonial-list"></div>
+        </div>
+    </section>
+    <!-- Testimonial area -->
+
+    <!-- Brand area -->
+    <section class="brand-area">
+        <div class="content">
+            <div class="brand-item">
+                <img src="/assets/images/brand-1.png" alt="brand-1">
+            </div>
+            <div class="brand-item">
+                <img src="/assets/images/brand-2.png" alt="brand-2">
+            </div>
+            <div class="brand-item">
+                <img src="/assets/images/brand-3.png" alt="brand-3">
+            </div>
+            <div class="brand-item">
+                <img src="/assets/images/brand-4.png" alt="brand-4">
+            </div>
+            <div class="brand-item">
+                <img src="/assets/images/brand-5.png" alt="brand-5">
+            </div>
+        </div>
+    </section>
+    <!-- Brand area -->
+
+    <!-- Blog area -->
+    <section class="blog-area">
+        <div class="content">
+            <div class="section-title">
+                <h2>Latest Blog</h2>
+            </div>
+            <p class="section-desc">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                roots in a piece of classical Latin literature
+            </p>
+
+            <div class="blog-list" id="blog-list"></div>
+        </div>
+    </section>
+    <!-- Blog area -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="content">
+            <div class="row">
+                <div class="footer-col-3">
+                    <div class="footer-widget-item">
+                        <div class="footer-widget-logo">
+                            <img src="/assets/images/logo.png" alt="logo">
+                        </div>
+                        <div class="footer-widget-desc">
+                            <p>Lorem ipsum dolor sit amet, consec adipisl elit, sed do eiusmod tempor incidio ut labore
+                                et
+                                dolore magna.
+                            </p>
+                        </div>
+                        <div class="footer-widget-social">
+                            <ul>
+                                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                                <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                                <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col-2 padding-top-40-right-left-12">
+                    <div class="footer-widget-item">
+                        <h3 class="footer-widget-title">Userful Links</h3>
+                        <ul class="footer-widget-list-item">
+                            <li><a href="#">About Pronia</a></li>
+                            <li><a href="#">How to shop</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Log in</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-col-2 padding-top-40-right-left-12">
+                    <div class="footer-widget-item">
+                        <h3 class="footer-widget-title">My Account</h3>
+                        <ul class="footer-widget-list-item">
+                            <li><a href="#">Sign In</a></li>
+                            <li><a href="#">View Cart</a></li>
+                            <li><a href="#">My Wishlist</a></li>
+                            <li><a href="#">Track My Order</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-col-2 padding-top-40-right-left-12">
+                    <div class="footer-widget-item">
+                        <h3 class="footer-widget-title">Our Services</h3>
+                        <ul class="footer-widget-list-item">
+                            <li><a href="#">Payment Methods</a></li>
+                            <li><a href="#">Money Guarantee</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-col-3 padding-top-40-right-left-12">
+                    <div class="footer-widget-item">
+                        <div class="footer-contact-info">
+                            <h3 class="footer-widget-title">Got Question? Call Us</h3>
+                            <a href="#" class="number">123 456 789</a>
+                            <div class="address">
+                                <ul>
+                                    <li>Your Address Goes Here</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="payment-method">
+                            <a href="#"><img src="/assets/images/payment.png" alt="payment"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+    <script src="/js/base.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>

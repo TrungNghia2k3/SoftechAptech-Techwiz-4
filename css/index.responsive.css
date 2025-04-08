@@ -1,0 +1,242 @@
+/* Extra Small Devices (Mobile, <576px) */
+@media (max-width: 575.98px) {
+    /* Thiết kế cho các điện thoại di động nhỏ */
+
+    /* Section title */
+    .section-title:before,
+    .section-title:after {
+        display: none;
+    }
+
+    /* Carousel */
+    .carousel .slider {
+        padding: 30px 0 40px 0;
+    }
+
+    .slider .content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .slide .content .content-left {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        margin-top: 30px;
+    }
+
+    .content-left .offer {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .content-left .title {
+        font-size: 45px;
+        margin-bottom: 0;
+        line-height: 1.3;
+    }
+
+    .content-left .short-description {
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
+
+    .content-left .content-left-btn {
+        width: 145px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 14px;
+        padding: 8px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content .content-right img.animate {
+        animation: slideUp 0.8s ease-out forwards 0.3s;
+    }
+
+    .content .content-left span.animate {
+        animation: slideUp 0.8s ease-out forwards 0.6s;
+    }
+
+    .content .content-left h2.animate {
+        animation: slideUp 0.8s ease-out forwards 0.9s;
+    }
+
+    .content .content-left p.animate {
+        animation: slideUp 0.8s ease-out forwards 1.2s;
+    }
+
+    .content .content-left button.animate {
+        animation: slideUp 0.8s ease-out forwards 1.5s;
+    }
+
+    .slide .content .content-right {
+        margin-top: 100px;
+    }
+
+    .content .content-right img {
+        width: 265px;
+        height: 312px;
+    }
+
+    /* Carousel */
+
+    /* Shipping */
+
+    .shipping-area {
+        padding: 50px 0 0 0;
+    }
+
+    .shipping-area .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content .shipping-content .title {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+
+    .content .shipping-content .short-description {
+        font-size: 15px;
+        color: #3e3e3f;
+    }
+
+    /* Shipping */
+
+    /* Product area*/
+    .product-area .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-tab-nav {
+        padding-bottom: 30px;
+    }
+
+    .content .product-tab-nav .nav-item {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* Product area*/
+
+    /* Banner area */
+    .banner-area {
+        padding-top: 50px;
+    }
+
+    .banner-area .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-item .banner-img {
+        height: 250px;
+    }
+
+    .banner-img img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .img-responsive {
+        width: 400px !important;
+    }
+
+    .text-position-left {
+        top: 25px;
+        left: 25px;
+    }
+
+    .banner-content .collection {
+        margin-bottom: 0px;
+    }
+
+    .banner-content .title {
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+
+    .btn-banner {
+        padding: 0;
+        width: 108px;
+        height: 28px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        border-radius: 23.5px;
+    }
+
+    /* Banner area */
+
+    /* Testimonial area */
+    .testimonial-area {
+        padding-bottom: 50px;
+    }
+
+    .testimonial-card {
+        margin: 0;
+    }
+
+    /* Testimonial area */
+
+    /* Brand area */
+    .brand-area .content {
+        padding: 40px 40px;
+    }
+
+    /* Brand area */
+
+    /* Blog area */
+    .blog-list {
+        flex-wrap: wrap;
+    }
+
+    .blog-card .blog-description {
+        white-space: normal;
+        word-wrap: break-word;
+
+    }
+
+    /* Blog area */
+}
+
+/* Small Devices (≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Thiết kế cho điện thoại di động lớn */
+}
+
+/* Medium Devices (≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Thiết kế cho máy tính bảng */
+}
+
+/* Large Devices (≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Thiết kế cho máy tính bàn */
+}
+
+/* Extra Large Devices (≥1200px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    /* Thiết kế cho màn hình rộng */
+}
+
+/* Extra Extra Large Devices (≥1400px) */
+@media (min-width: 1400px) {
+    /* Thiết kế cho màn hình cực lớn */
+
+}
