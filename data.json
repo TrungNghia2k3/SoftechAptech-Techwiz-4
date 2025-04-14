@@ -13,6 +13,7 @@
       "category": "Flowering Shrubs",
       "size": ["Small", "Medium", "Large"],
       "color": ["Red", "Blue", "Green"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Flowering", "Shrubs"]
     },
     {
@@ -28,6 +29,7 @@
       "category": "Ornamental Grasses",
       "size": ["Small", "Medium"],
       "color": ["Yellow", "Brown"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental", "Grasses"]
     },
     {
@@ -43,6 +45,7 @@
       "category": "Annuals",
       "size": ["Small", "Medium"],
       "color": ["Orange", "Yellow"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Annuals", "Flowers"]
     },
     {
@@ -58,6 +61,7 @@
       "category": "Perennials",
       "size": ["Small", "Medium"],
       "color": ["Yellow", "Brown"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Perennials", "Flowers"]
     },
     {
@@ -73,6 +77,7 @@
       "category": "Perennials",
       "size": ["Small", "Medium", "Large"],
       "color": ["Orange", "Yellow"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Perennials", "Flowers"]
     },
     {
@@ -88,6 +93,7 @@
       "category": "Perennials",
       "size": ["Small", "Medium"],
       "color": ["White", "Yellow"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Perennials", "Flowers"]
     },
     {
@@ -103,6 +109,7 @@
       "category": "Perennials",
       "size": ["Small", "Medium"],
       "color": ["Pink", "White"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Perennials", "Flowers"]
     },
     {
@@ -118,6 +125,7 @@
       "category": "Perennials",
       "size": ["Small", "Medium"],
       "color": ["Purple", "Blue"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Perennials", "Flowers"]
     },
     {
@@ -133,6 +141,7 @@
       "category": "Xeriscaping",
       "size": ["Small", "Medium"],
       "color": ["Blue", "Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping", "Flowers"]
     },
     {
@@ -148,6 +157,7 @@
       "category": "Xeriscaping",
       "size": ["Small", "Medium"],
       "color": ["Purple", "Pink"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping", "Flowers"]
     },
     {
@@ -163,6 +173,7 @@
       "category": "Xeriscaping",
       "size": ["Small", "Medium"],
       "color": ["Purple", "White"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping", "Flowers"]
     },
     {
@@ -178,6 +189,7 @@
       "category": "Container Gardening",
       "size": ["Small", "Medium"],
       "color": ["Pink", "White"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Container Gardening"]
     },
     {
@@ -193,6 +205,7 @@
       "category": "Container Gardening",
       "size": ["Small", "Medium"],
       "color": ["White", "Yellow"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Container Gardening"]
     },
     {
@@ -208,6 +221,7 @@
       "category": "Container Gardening",
       "size": ["Small", "Medium"],
       "color": ["Blue", "Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Container Gardening"]
     },
     {
@@ -223,6 +237,7 @@
       "category": "Container Gardening",
       "size": ["Small", "Medium"],
       "color": ["Yellow", "Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Container Gardening"]
     },
     {
@@ -238,6 +253,7 @@
       "category": "Container Gardening",
       "size": ["Small", "Medium"],
       "color": ["Purple", "Green"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Container Gardening"]
     },
     {
@@ -253,6 +269,7 @@
       "category": "Container Gardening",
       "size": ["Small", "Medium"],
       "color": ["White", "Yellow"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Container Gardening"]
     },
     {
@@ -268,6 +285,7 @@
       "category": "Perennials",
       "size": ["Medium", "Large", "Small"],
       "color": ["Orange", "Brown"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping", "Shrubs"]
     },
     {
@@ -283,6 +301,7 @@
       "category": "Annuals",
       "size": ["Large", "Small"],
       "color": ["Orange", "Green"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental", "Xeriscaping", "Grasses", "Flowers"]
     },
     {
@@ -298,6 +317,7 @@
       "category": "Annuals",
       "size": ["Medium", "Large"],
       "color": ["Red"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Shrubs", "Grasses", "Ornamental", "Container Gardening"]
     },
     {
@@ -313,6 +333,7 @@
       "category": "Ornamental Grasses",
       "size": ["Medium", "Large"],
       "color": ["Pink", "Green", "Orange"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping", "Annuals", "Perennials", "Shrubs"]
     },
     {
@@ -328,6 +349,7 @@
       "category": "Perennials",
       "size": ["Medium", "Large"],
       "color": ["Yellow", "Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Container Gardening", "Shrubs", "Xeriscaping", "Perennials"]
     },
     {
@@ -343,6 +365,7 @@
       "category": "Perennials",
       "size": ["Small", "Medium"],
       "color": ["White", "Orange", "Blue"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Grasses", "Xeriscaping", "Container Gardening"]
     },
     {
@@ -358,6 +381,7 @@
       "category": "Flowering Shrubs",
       "size": ["Medium", "Large"],
       "color": ["Blue"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Annuals", "Flowers", "Grasses", "Container Gardening"]
     },
     {
@@ -373,6 +397,7 @@
       "category": "Perennials",
       "size": ["Medium"],
       "color": ["Pink"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental", "Grasses", "Annuals"]
     },
     {
@@ -388,6 +413,7 @@
       "category": "Perennials",
       "size": ["Medium", "Large"],
       "color": ["Pink", "Red", "Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Container Gardening"]
     },
     {
@@ -403,6 +429,7 @@
       "category": "Annuals",
       "size": ["Small", "Medium"],
       "color": ["Orange", "Pink", "Brown"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Perennials", "Container Gardening", "Shrubs"]
     },
     {
@@ -418,6 +445,7 @@
       "category": "Container Gardening",
       "size": ["Small", "Medium", "Large"],
       "color": ["Blue"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Flowers", "Ornamental", "Xeriscaping"]
     },
     {
@@ -433,6 +461,7 @@
       "category": "Container Gardening",
       "size": ["Small"],
       "color": ["Orange"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Grasses", "Container Gardening"]
     },
     {
@@ -448,6 +477,7 @@
       "category": "Ornamental Grasses",
       "size": ["Small"],
       "color": ["Purple", "Blue", "Pink"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Shrubs", "Annuals", "Container Gardening", "Perennials"]
     },
     {
@@ -463,6 +493,7 @@
       "category": "Xeriscaping",
       "size": ["Medium"],
       "color": ["Pink", "White", "Yellow"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental", "Annuals", "Grasses"]
     },
     {
@@ -478,11 +509,12 @@
       "category": "Annuals",
       "size": ["Small", "Medium", "Large"],
       "color": ["Brown", "Blue"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Shrubs", "Flowers", "Annuals", "Xeriscaping"]
     },
     {
       "id": 33,
-      "name": "Philodendron Plant",
+      "name": "Philodendron Plant #1",
       "price": 73.17,
       "rating": 5,
       "image-primary": "/assets/images/product/product-primary-33.png",
@@ -493,11 +525,12 @@
       "category": "Perennials",
       "size": ["Small"],
       "color": ["Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Perennials", "Grasses"]
     },
     {
       "id": 34,
-      "name": "Philodendron Plant",
+      "name": "Philodendron Plant #2",
       "price": 82.78,
       "rating": 3,
       "image-primary": "/assets/images/product/product-primary-34.png",
@@ -508,11 +541,12 @@
       "category": "Container Gardening",
       "size": ["Small", "Large", "Medium"],
       "color": ["Green", "Blue"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Perennials", "Shrubs", "Annuals", "Container Gardening"]
     },
     {
       "id": 35,
-      "name": "Philodendron Plant",
+      "name": "Philodendron Plant #3",
       "price": 28.27,
       "rating": 5,
       "image-primary": "/assets/images/product/product-primary-35.png",
@@ -523,6 +557,7 @@
       "category": "Flowering Shrubs",
       "size": ["Large"],
       "color": ["Blue", "Yellow"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping", "Annuals", "Ornamental"]
     },
     {
@@ -538,6 +573,7 @@
       "category": "Container Gardening",
       "size": ["Small", "Medium"],
       "color": ["Blue"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Annuals", "Grasses", "Ornamental"]
     },
     {
@@ -553,6 +589,7 @@
       "category": "Xeriscaping",
       "size": ["Medium", "Small", "Large"],
       "color": ["Yellow", "Orange", "Red"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Perennials"]
     },
     {
@@ -568,6 +605,7 @@
       "category": "Perennials",
       "size": ["Large", "Medium"],
       "color": ["Yellow"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental", "Annuals", "Container Gardening", "Shrubs"]
     },
     {
@@ -583,6 +621,7 @@
       "category": "Annuals",
       "size": ["Small", "Medium", "Large"],
       "color": ["Orange"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Grasses", "Flowers"]
     },
     {
@@ -598,6 +637,7 @@
       "category": "Container Gardening",
       "size": ["Small", "Large", "Medium"],
       "color": ["Pink"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Grasses", "Perennials"]
     },
     {
@@ -613,6 +653,7 @@
       "category": "Xeriscaping",
       "size": ["Large"],
       "color": ["Blue", "Red", "White"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental", "Shrubs", "Flowers", "Container Gardening"]
     },
     {
@@ -628,6 +669,7 @@
       "category": "Annuals",
       "size": ["Medium", "Large", "Small"],
       "color": ["Green", "Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Annuals", "Flowers", "Xeriscaping"]
     },
     {
@@ -643,6 +685,7 @@
       "category": "Annuals",
       "size": ["Medium"],
       "color": ["Blue"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Grasses"]
     },
     {
@@ -658,6 +701,7 @@
       "category": "Ornamental Grasses",
       "size": ["Medium", "Large", "Small"],
       "color": ["White"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Shrubs"]
     },
     {
@@ -673,6 +717,7 @@
       "category": "Xeriscaping",
       "size": ["Small", "Medium", "Large"],
       "color": ["Orange"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Grasses"]
     },
     {
@@ -688,6 +733,7 @@
       "category": "Flowering Shrubs",
       "size": ["Large"],
       "color": ["Brown", "White"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping"]
     },
     {
@@ -703,6 +749,7 @@
       "category": "Xeriscaping",
       "size": ["Medium"],
       "color": ["White", "Blue"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping", "Perennials", "Annuals", "Container Gardening"]
     },
     {
@@ -718,6 +765,7 @@
       "category": "Xeriscaping",
       "size": ["Small", "Large"],
       "color": ["Pink"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Annuals", "Shrubs", "Grasses"]
     },
     {
@@ -733,6 +781,7 @@
       "category": "Annuals",
       "size": ["Large", "Small"],
       "color": ["Orange", "Yellow", "Red"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping", "Annuals", "Container Gardening", "Ornamental"]
     },
     {
@@ -748,6 +797,7 @@
       "category": "Perennials",
       "size": ["Small", "Large", "Medium"],
       "color": ["Brown", "Purple", "Blue"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping"]
     },
     {
@@ -763,6 +813,7 @@
       "category": "Ornamental Grasses",
       "size": ["Medium", "Small"],
       "color": ["Green", "Orange"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping", "Annuals"]
     },
     {
@@ -778,6 +829,7 @@
       "category": "Annuals",
       "size": ["Large", "Small", "Medium"],
       "color": ["Green", "Yellow", "White"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Grasses", "Xeriscaping", "Perennials", "Shrubs"]
     },
     {
@@ -793,6 +845,7 @@
       "category": "Xeriscaping",
       "size": ["Medium", "Large"],
       "color": ["Red", "White", "Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping"]
     },
     {
@@ -808,6 +861,7 @@
       "category": "Annuals",
       "size": ["Large"],
       "color": ["Orange", "Purple", "Red"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental", "Grasses", "Shrubs"]
     },
     {
@@ -823,6 +877,7 @@
       "category": "Container Gardening",
       "size": ["Small", "Medium"],
       "color": ["White", "Blue", "Brown"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental", "Annuals", "Flowers", "Perennials"]
     },
     {
@@ -838,6 +893,7 @@
       "category": "Annuals",
       "size": ["Small"],
       "color": ["Orange", "Pink"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Perennials", "Annuals"]
     },
     {
@@ -853,6 +909,7 @@
       "category": "Ornamental Grasses",
       "size": ["Large"],
       "color": ["White"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Flowers", "Container Gardening"]
     },
     {
@@ -868,6 +925,7 @@
       "category": "Flowering Shrubs",
       "size": ["Small", "Large", "Medium"],
       "color": ["Brown", "White"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Flowers"]
     },
     {
@@ -883,6 +941,7 @@
       "category": "Flowering Shrubs",
       "size": ["Small", "Large", "Medium"],
       "color": ["Blue", "Pink", "Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping", "Container Gardening"]
     },
     {
@@ -898,6 +957,7 @@
       "category": "Ornamental Grasses",
       "size": ["Small", "Medium", "Large"],
       "color": ["Orange", "Red", "Blue"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Flowers", "Ornamental"]
     },
     {
@@ -913,6 +973,7 @@
       "category": "Container Gardening",
       "size": ["Small", "Medium", "Large"],
       "color": ["Yellow", "Green"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Annuals"]
     },
     {
@@ -928,6 +989,7 @@
       "category": "Flowering Shrubs",
       "size": ["Small", "Medium", "Large"],
       "color": ["Orange", "Yellow", "Red"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Shrubs", "Ornamental"]
     },
     {
@@ -943,6 +1005,7 @@
       "category": "Container Gardening",
       "size": ["Large"],
       "color": ["Green"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping"]
     },
     {
@@ -958,6 +1021,7 @@
       "category": "Perennials",
       "size": ["Small"],
       "color": ["Orange", "Brown", "Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Annuals", "Grasses"]
     },
     {
@@ -973,6 +1037,7 @@
       "category": "Ornamental Grasses",
       "size": ["Large"],
       "color": ["Blue", "Yellow"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Perennials", "Grasses", "Flowers"]
     },
     {
@@ -988,6 +1053,7 @@
       "category": "Xeriscaping",
       "size": ["Medium", "Small"],
       "color": ["White", "Green", "Orange"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Flowers", "Container Gardening"]
     },
     {
@@ -1003,6 +1069,7 @@
       "category": "Container Gardening",
       "size": ["Small", "Large"],
       "color": ["White"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Shrubs", "Grasses", "Xeriscaping", "Container Gardening"]
     },
     {
@@ -1018,6 +1085,7 @@
       "category": "Xeriscaping",
       "size": ["Large", "Medium"],
       "color": ["Blue", "Green", "Orange"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping", "Shrubs"]
     },
     {
@@ -1033,6 +1101,7 @@
       "category": "Annuals",
       "size": ["Medium", "Large"],
       "color": ["Yellow", "White", "Red"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Flowers", "Xeriscaping"]
     },
     {
@@ -1048,6 +1117,7 @@
       "category": "Flowering Shrubs",
       "size": ["Medium"],
       "color": ["Yellow", "Blue"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping", "Ornamental", "Grasses", "Annuals"]
     },
     {
@@ -1063,6 +1133,7 @@
       "category": "Flowering Shrubs",
       "size": ["Large", "Small"],
       "color": ["Brown", "Yellow", "White"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Flowers", "Perennials", "Xeriscaping", "Annuals"]
     },
     {
@@ -1078,6 +1149,7 @@
       "category": "Ornamental Grasses",
       "size": ["Small", "Large"],
       "color": ["Brown", "Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Grasses", "Ornamental", "Annuals", "Container Gardening"]
     },
     {
@@ -1093,6 +1165,7 @@
       "category": "Annuals",
       "size": ["Medium"],
       "color": ["Orange", "Yellow", "Pink"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental", "Flowers", "Annuals"]
     },
     {
@@ -1108,6 +1181,7 @@
       "category": "Ornamental Grasses",
       "size": ["Large", "Medium"],
       "color": ["Blue"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Perennials", "Annuals", "Xeriscaping"]
     },
     {
@@ -1123,6 +1197,7 @@
       "category": "Xeriscaping",
       "size": ["Small", "Medium", "Large"],
       "color": ["Brown", "Purple", "Blue"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Annuals"]
     },
     {
@@ -1138,6 +1213,7 @@
       "category": "Xeriscaping",
       "size": ["Medium"],
       "color": ["Orange"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Shrubs", "Xeriscaping", "Ornamental", "Container Gardening"]
     },
     {
@@ -1153,6 +1229,7 @@
       "category": "Xeriscaping",
       "size": ["Small", "Medium", "Large"],
       "color": ["White", "Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Annuals", "Ornamental", "Xeriscaping"]
     },
     {
@@ -1168,6 +1245,7 @@
       "category": "Ornamental Grasses",
       "size": ["Large"],
       "color": ["Red", "Brown", "Blue"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental", "Xeriscaping", "Perennials"]
     },
     {
@@ -1183,6 +1261,7 @@
       "category": "Xeriscaping",
       "size": ["Medium", "Large", "Small"],
       "color": ["Red"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Grasses", "Shrubs"]
     },
     {
@@ -1198,6 +1277,7 @@
       "category": "Flowering Shrubs",
       "size": ["Large", "Small"],
       "color": ["Pink", "Purple", "Red"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental", "Flowers", "Grasses", "Xeriscaping"]
     },
     {
@@ -1213,6 +1293,7 @@
       "category": "Perennials",
       "size": ["Small", "Large", "Medium"],
       "color": ["Green"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Shrubs", "Perennials"]
     },
     {
@@ -1228,6 +1309,7 @@
       "category": "Perennials",
       "size": ["Medium", "Large"],
       "color": ["Red", "Brown"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Perennials", "Grasses"]
     },
     {
@@ -1243,6 +1325,7 @@
       "category": "Annuals",
       "size": ["Medium"],
       "color": ["Green", "Red", "Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Grasses"]
     },
     {
@@ -1258,6 +1341,7 @@
       "category": "Ornamental Grasses",
       "size": ["Medium", "Large", "Small"],
       "color": ["Blue", "Orange", "Brown"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental", "Perennials", "Shrubs", "Annuals"]
     },
     {
@@ -1273,6 +1357,7 @@
       "category": "Annuals",
       "size": ["Medium", "Large"],
       "color": ["Yellow", "Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Annuals", "Grasses", "Flowers", "Xeriscaping"]
     },
     {
@@ -1288,6 +1373,7 @@
       "category": "Annuals",
       "size": ["Medium", "Large", "Small"],
       "color": ["Brown", "Pink"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Container Gardening", "Flowers", "Shrubs"]
     },
     {
@@ -1303,6 +1389,7 @@
       "category": "Annuals",
       "size": ["Medium", "Large"],
       "color": ["Orange", "Brown", "White"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Flowers", "Container Gardening", "Perennials"]
     },
     {
@@ -1318,6 +1405,7 @@
       "category": "Flowering Shrubs",
       "size": ["Small", "Large", "Medium"],
       "color": ["Brown", "White", "Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Annuals"]
     },
     {
@@ -1333,6 +1421,7 @@
       "category": "Container Gardening",
       "size": ["Large", "Small"],
       "color": ["Orange"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Shrubs", "Flowers", "Annuals"]
     },
     {
@@ -1348,6 +1437,7 @@
       "category": "Annuals",
       "size": ["Medium"],
       "color": ["Green"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Flowers", "Ornamental"]
     },
     {
@@ -1363,6 +1453,7 @@
       "category": "Xeriscaping",
       "size": ["Large", "Small", "Medium"],
       "color": ["Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Shrubs"]
     },
     {
@@ -1378,6 +1469,7 @@
       "category": "Perennials",
       "size": ["Large", "Small"],
       "color": ["Blue", "Orange"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Annuals", "Grasses"]
     },
     {
@@ -1393,6 +1485,7 @@
       "category": "Ornamental Grasses",
       "size": ["Medium"],
       "color": ["White"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Annuals", "Flowers", "Grasses"]
     },
     {
@@ -1408,6 +1501,7 @@
       "category": "Annuals",
       "size": ["Large", "Medium", "Small"],
       "color": ["Blue", "Green"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental", "Grasses"]
     },
     {
@@ -1423,6 +1517,7 @@
       "category": "Annuals",
       "size": ["Large", "Medium", "Small"],
       "color": ["Pink", "Blue", "Brown"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental"]
     },
     {
@@ -1438,6 +1533,7 @@
       "category": "Perennials",
       "size": ["Medium"],
       "color": ["Blue", "Orange"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Flowers", "Annuals", "Ornamental", "Perennials"]
     },
     {
@@ -1453,6 +1549,7 @@
       "category": "Perennials",
       "size": ["Small"],
       "color": ["Red", "Yellow", "Brown"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Flowers", "Container Gardening", "Annuals", "Shrubs"]
     },
     {
@@ -1468,6 +1565,7 @@
       "category": "Xeriscaping",
       "size": ["Small", "Medium", "Large"],
       "color": ["Green", "White"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Shrubs", "Annuals", "Ornamental", "Perennials"]
     },
     {
@@ -1483,6 +1581,7 @@
       "category": "Container Gardening",
       "size": ["Medium", "Small", "Large"],
       "color": ["Pink", "White", "Yellow"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental"]
     },
     {
@@ -1498,6 +1597,7 @@
       "category": "Perennials",
       "size": ["Medium", "Small"],
       "color": ["Purple", "Orange"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping", "Grasses", "Flowers", "Perennials"]
     },
     {
@@ -1513,6 +1613,7 @@
       "category": "Ornamental Grasses",
       "size": ["Small", "Medium"],
       "color": ["Pink", "Orange"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Container Gardening", "Annuals"]
     },
     {
@@ -1528,6 +1629,7 @@
       "category": "Perennials",
       "size": ["Small"],
       "color": ["Purple", "Orange"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Container Gardening", "Annuals", "Flowers"]
     },
     {
@@ -1543,6 +1645,7 @@
       "category": "Perennials",
       "size": ["Large", "Small", "Medium"],
       "color": ["Pink", "Orange", "Yellow"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Grasses", "Perennials", "Annuals", "Shrubs"]
     },
     {
@@ -1558,6 +1661,7 @@
       "category": "Flowering Shrubs",
       "size": ["Medium", "Large", "Small"],
       "color": ["Purple", "Orange", "Green"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Xeriscaping", "Ornamental", "Flowers", "Annuals"]
     },
     {
@@ -1573,6 +1677,7 @@
       "category": "Container Gardening",
       "size": ["Medium"],
       "color": ["Purple", "Orange", "Pink"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental", "Perennials", "Xeriscaping"]
     },
     {
@@ -1588,6 +1693,7 @@
       "category": "Annuals",
       "size": ["Medium", "Small", "Large"],
       "color": ["Blue", "Purple"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Grasses"]
     },
     {
@@ -1603,6 +1709,7 @@
       "category": "Ornamental Grasses",
       "size": ["Medium", "Large"],
       "color": ["Red"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Flowers", "Perennials", "Ornamental"]
     },
     {
@@ -1618,6 +1725,7 @@
       "category": "Flowering Shrubs",
       "size": ["Medium", "Small", "Large"],
       "color": ["White"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Annuals", "Ornamental", "Flowers"]
     },
     {
@@ -1633,6 +1741,7 @@
       "category": "Ornamental Grasses",
       "size": ["Large", "Medium"],
       "color": ["Green", "Orange", "Red"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Perennials", "Grasses", "Ornamental"]
     },
     {
@@ -1648,6 +1757,7 @@
       "category": "Xeriscaping",
       "size": ["Small", "Large"],
       "color": ["Red", "Green"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Flowers", "Container Gardening", "Perennials", "Grasses"]
     },
     {
@@ -1663,6 +1773,7 @@
       "category": "Annuals",
       "size": ["Medium"],
       "color": ["Green", "Brown"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Grasses", "Annuals", "Shrubs", "Perennials"]
     },
     {
@@ -1678,6 +1789,7 @@
       "category": "Annuals",
       "size": ["Small", "Large", "Medium"],
       "color": ["Pink", "Orange"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Flowers", "Grasses", "Perennials"]
     },
     {
@@ -1693,6 +1805,7 @@
       "category": "Annuals",
       "size": ["Large", "Medium"],
       "color": ["White", "Blue"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Shrubs", "Grasses", "Annuals", "Xeriscaping"]
     },
     {
@@ -1708,6 +1821,7 @@
       "category": "Xeriscaping",
       "size": ["Small"],
       "color": ["Orange", "White"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Annuals"]
     },
     {
@@ -1723,6 +1837,7 @@
       "category": "Container Gardening",
       "size": ["Small", "Large", "Medium"],
       "color": ["White", "Pink", "Red"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Annuals", "Grasses"]
     },
     {
@@ -1738,6 +1853,7 @@
       "category": "Ornamental Grasses",
       "size": ["Small"],
       "color": ["Brown"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Ornamental", "Container Gardening", "Xeriscaping", "Annuals"]
     },
     {
@@ -1753,6 +1869,7 @@
       "category": "Flowering Shrubs",
       "size": ["Small"],
       "color": ["Pink", "Orange", "Red"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Container Gardening", "Xeriscaping", "Annuals"]
     },
     {
@@ -1768,6 +1885,7 @@
       "category": "Flowering Shrubs",
       "size": ["Small"],
       "color": ["Pink", "Orange", "Red"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Container Gardening", "Annuals"]
     },
     {
@@ -1783,6 +1901,7 @@
       "category": "Flowering Shrubs",
       "size": ["Small"],
       "color": ["Pink", "Orange"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Container Gardening", "Xeriscaping", "Annuals"]
     },
     {
@@ -1798,6 +1917,7 @@
       "category": "Flowering Shrubs",
       "size": ["Small"],
       "color": ["Pink", "Orange", "Red"],
+      "description": "Proin nec ligula dolor. Mauris mollis turpis vitae viverra viverra. Mauris at lacus commodo, dictum eros in, interdum diam. Sed lorem orci, maximus nec efficitur, mattis sed tortor. Voluptates repudiandae nulla rhoncus varius eget id eros.",
       "tag": ["Container Gardening", "Xeriscaping", "Annuals"]
     }
   ],

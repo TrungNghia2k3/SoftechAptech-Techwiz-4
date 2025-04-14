@@ -7,13 +7,14 @@
     <link rel="icon" href="/assets/images/logo.png">
     <title>Pronia - Plant Shop</title>
     <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/shop.css">
+    <link rel="stylesheet" href="/css/about.css">
     <link rel="stylesheet" href="/css/base.responsive.css">
-    <link rel="stylesheet" href="/css/shop.responsive.css">
+    <link rel="stylesheet" href="/css/about.responsive.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
 <body>
+
     <!-- Header -->
     <header id="main-header">
         <!-- Phần header ban đầu -->
@@ -125,109 +126,181 @@
     <section class="breadcrumb-area">
         <div class="content">
             <div class="breadcrumb-item">
-                <h2 class="breadcrumb-heading">Shop</h2>
+                <h2 class="breadcrumb-heading">About Us</h2>
                 <ul>
                     <li><a href="/index.html">Home</a></li>
-                    <li>Shop Default</li>
+                    <li>About Us</li>
                 </ul>
             </div>
         </div>
     </section>
     <!-- Breadcrumb area -->
 
-    <!-- Shop area -->
-    <section class="shop-area">
+    <!-- About content area -->
+    <section class="about-content-area">
         <div class="content">
-            <div class="row">
-                <div class="col-3">
-                    <div class="sidebar-area">
-                        <!-- Search box -->
-                        <div class="widgets-searchbox">
-                            <form id="widgets-searchbox">
-                                <input type="text" class="input-field" id="searchInput" placeholder="Search" />
-                                <button type="submit" class="widgets-searchbox-btn">
-                                    <i class="bi bi-search"></i>
-                                </button>
-                            </form>
-                        </div>
+            <h2 class="about-title">Our <span>Story</span></h2>
+            <p class="about-description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+            </p>
+            <div class="about-signature">
+                <img src="/assets/images/about-2.png" alt="Signature">
+            </div>
+        </div>
+    </section>
 
-                        <div class="widgets-area" id="filterArea">
-                            <!-- Categories -->
-                            <div class="widget-item widget-categories">
-                                <h4 class="widget-title">Categories</h4>
-                                <ul id="filter-categories"></ul>
-                            </div>
-
-                            <!-- Colors -->
-                            <div class="widget-item widget-colors">
-                                <h4 class="widget-title">Colors</h4>
-                                <ul id="filter-colors"></ul>
-                            </div>
-
-                            <!-- Price -->
-                            <div class="widget-item widget-price">
-                                <h4 class="widget-title">Price</h4>
-                                <div class="price-input">
-                                    <div class="field">
-                                        <input type="number" class="input-min" value="10">
-                                    </div>
-                                    <div class="separator">-</div>
-                                    <div class="field">
-                                        <input type="number" class="input-max" value="100">
-                                    </div>
-                                </div>
-                                <div class="slider">
-                                    <div class="progress"></div>
-                                </div>
-                                <div class="range-input">
-                                    <input type="range" class="range-min" min="0" max="100" value="10" step="10">
-                                    <input type="range" class="range-max" min="0" max="100" value="100" step="10">
-                                </div>
-                            </div>
-
-                            <!-- Tags -->
-                            <div class="widget-item widget-tags">
-                                <h4 class="widget-title">Tags</h4>
-                                <ul id="filter-tags" class="tag-list"></ul>
-                            </div>
-                        </div>
-
-                        <div class="banner-item"></div>
-                    </div>
-
+    <!-- Shipping area -->
+    <section class="shipping-area">
+        <div class="content">
+            <div class="shipping-item">
+                <div class="shipping-img">
+                    <img src="/assets/images/shipping-1.png" alt="Shipping 1">
                 </div>
-                <div class="col-9">
-                    <div class="product-topbar">
-                        <div class="view-toggle">
-                            <button class="view-btn active" data-view="grid">
-                                <i class="bi bi-grid-3x3-gap-fill"></i>
-                            </button>
-                            <button class="view-btn" data-view="list">
-                                <i class="bi bi-list-ul"></i>
-                            </button>
-                        </div>
-
-                        <div class="custom-select-wrapper">
-                            <select id="sortSelect" class="sort-select">
-                                <option value="default">Default</option>
-                                <option value="sold">Sort by Sold</option>
-                                <option value="rated">Sort by Rated</option>
-                                <option value="latest">Sort by Latest</option>
-                                <option value="high-price">Sort by High Price</option>
-                                <option value="low-price">Sort by Low Price</option>
-                            </select>
-                            <i class="bi bi-chevron-down select-icon"></i>
-                        </div>
-
-                    </div>
-                    <div class="tab-content"></div>
-                    <div class="pagination-area"></div>
+                <div class="shipping-content">
+                    <h2 class="title">Free Shipping</h2>
+                    <p class="short-description">Capped at $319 per order</p>
+                </div>
+            </div>
+            <div class="shipping-item">
+                <div class="shipping-img">
+                    <img src="/assets/images/shipping-2.png" alt="Shipping 2">
+                </div>
+                <div class="shipping-content">
+                    <h2 class="title">Safe Payment</h2>
+                    <p class="short-description">With our payment gateway</p>
+                </div>
+            </div>
+            <div class="shipping-item">
+                <div class="shipping-img">
+                    <img src="/assets/images/shipping-3.png" alt="Shipping 3">
+                </div>
+                <div class="shipping-content">
+                    <h2 class="title">Best Services</h2>
+                    <p class="short-description">Friendly & Supper Services</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Shop area -->
+    <!-- Shipping area -->
 
+    <!-- Team area -->
+    <section class="team-area">
+        <div class="content">
+            <div class="section-title">
+                <h2>Our Team</h2>
+            </div>
+            <p class="section-desc">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                roots in a piece of classical Latin literature
+            </p>
+
+            <div class="team-item-list">
+                <div class="team-item padding-top-38px">
+                    <div class="team-img">
+                        <img src="/assets/images/team-1.png" alt="Team Member 1">
+                        <div class="inner-content">
+                            <h2 class="team-member-name">Michaeal Murphy</h2>
+                            <span class="occupation">Sales man</span>
+                            <div class="social-link">
+                                <ul>
+                                    <li><a href="#" data-tooltip="Facebook"><i class="bi bi-facebook"></i></a></li>
+                                    <li><a href="#" data-tooltip="Twitter"><i class="bi bi-twitter"></i></a></li>
+                                    <li><a href="#" data-tooltip="Pinterest"><i class="bi bi-pinterest"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-member-name">Micheal Murphy</div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="/assets/images/team-2.png" alt="Team Member 2">
+                        <div class="inner-content">
+                            <h2 class="team-member-name">Kari Rasmus</h2>
+                            <span class="occupation">Sales man</span>
+                            <div class="social-link">
+                                <ul>
+                                    <li><a href="#" data-tooltip="Facebook"><i class="bi bi-facebook"></i></a></li>
+                                    <li><a href="#" data-tooltip="Twitter"><i class="bi bi-twitter"></i></a></li>
+                                    <li><a href="#" data-tooltip="Pinterest"><i class="bi bi-pinterest"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-member-name">Kari Rasmus</div>
+                    </div>
+                </div>
+                <div class="team-item padding-top-38px">
+                    <div class="team-img">
+                        <img src="/assets/images/team-3.png" alt="Team Member 3">
+                        <div class="inner-content">
+                            <h2 class="team-member-name">Britney Cooper</h2>
+                            <span class="occupation">Sales man</span>
+                            <div class="social-link">
+                                <ul>
+                                    <li><a href="#" data-tooltip="Facebook"><i class="bi bi-facebook"></i></a></li>
+                                    <li><a href="#" data-tooltip="Twitter"><i class="bi bi-twitter"></i></a></li>
+                                    <li><a href="#" data-tooltip="Pinterest"><i class="bi bi-pinterest"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-member-name">Britney Cooper</div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="/assets/images/team-4.png" alt="Team Member 4">
+                        <div class="inner-content">
+                            <h2 class="team-member-name">Marissa Swan</h2>
+                            <span class="occupation">Sales man</span>
+                            <div class="social-link">
+                                <ul>
+                                    <li><a href="#" data-tooltip="Facebook"><i class="bi bi-facebook"></i></a></li>
+                                    <li><a href="#" data-tooltip="Twitter"><i class="bi bi-twitter"></i></a></li>
+                                    <li><a href="#" data-tooltip="Pinterest"><i class="bi bi-pinterest"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-member-name">Marissa Swan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team area -->
+
+    <!-- Brand area -->
+    <section class="brand-area">
+        <div class="content">
+            <div class="brand-item">
+                <img src="/assets/images/brand-1.png" alt="brand-1">
+            </div>
+            <div class="brand-item">
+                <img src="/assets/images/brand-2.png" alt="brand-2">
+            </div>
+            <div class="brand-item">
+                <img src="/assets/images/brand-3.png" alt="brand-3">
+            </div>
+            <div class="brand-item">
+                <img src="/assets/images/brand-4.png" alt="brand-4">
+            </div>
+            <div class="brand-item">
+                <img src="/assets/images/brand-5.png" alt="brand-5">
+            </div>
+        </div>
+    </section>
+    <!-- Brand area -->
 
     <!-- Footer -->
     <footer>
@@ -310,9 +383,8 @@
         </div>
     </footer>
     <!-- Footer -->
-
     <script src="/js/base.js"></script>
-    <script src="/js/shop.js"></script>
+    <script src="/js/about.js"></script>
 </body>
 
 </html>

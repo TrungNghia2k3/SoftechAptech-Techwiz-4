@@ -1,6 +1,4 @@
-// =====================
-// 🔸 Biến toàn cục
-// =====================
+// Biến toàn cục
 let allProducts = [];
 let filters = {
   search: "",
@@ -11,9 +9,7 @@ let filters = {
   priceMax: 100,
 };
 
-// =====================
-// 🔸 Load dữ liệu filters từ data.json
-// =====================
+// Load dữ liệu filters từ data.json
 async function loadFilters() {
   try {
     const response = await fetch("data.json");
@@ -22,7 +18,7 @@ async function loadFilters() {
 
     renderFilterList("filter-categories", data.categories);
     renderFilterList("filter-colors", data.colors);
-    renderFilterList("filter-tags", data.tags);
+    renderTagList("filter-tags", data.tags);
     setupPriceSlider(); // setup slider sau khi DOM có sẵn
     setupCheckboxEvents(); // setup sự kiện checkbox sau khi render xong
     applyFilters(); // lọc ban đầu (tất cả sản phẩm)
@@ -31,22 +27,72 @@ async function loadFilters() {
   }
 }
 
-// =====================
-// 🔸 Render danh sách checkbox từ mảng
-// =====================
+// Render danh sách checkbox từ mảng
 function renderFilterList(containerId, list) {
   const container = document.getElementById(containerId);
   container.innerHTML = list
     .map(
       (item) =>
-        `<li><label><input type="checkbox" value="${item}"> ${item}</label></li>`
+        `<li>
+          <label>
+            <i class="bi bi-chevron-right"></i>
+            <input type="checkbox" value="${item}">
+            ${item}
+          </label>
+        </li>`
     )
     .join("");
+
+  // Gán sự kiện sau khi render xong
+  container.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      const li = this.closest("li");
+      if (this.checked) {
+        li.classList.add("checked");
+      } else {
+        li.classList.remove("checked");
+      }
+    });
+  });
 }
 
-// =====================
-// 🔸 Thiết lập sự kiện tìm kiếm
-// =====================
+// Render danh sách tag
+function renderTagList(containerId, list) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = list
+    .map(
+      (item) =>
+        `<li><a href="#" class="tag-item" data-tag="${item}">${item}</a></li>`
+    )
+    .join("");
+
+  setupTagFilter(containerId);
+}
+
+// Setup sự kiện cho tag filter
+function setupTagFilter(containerId) {
+  const tagElements = document.querySelectorAll(`#${containerId} .tag-item`);
+
+  tagElements.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      el.classList.toggle("active");
+
+      // Lấy danh sách tag đang active
+      const selectedTags = [
+        ...document.querySelectorAll(`#${containerId} .tag-item.active`),
+      ].map((tag) => tag.dataset.tag);
+
+      // Cập nhật filter và gọi lọc lại
+      filters.tags = selectedTags;
+      currentPage = 1;
+      applyFilters();
+    });
+  });
+}
+
+// Thiết lập sự kiện tìm kiếm
 document.getElementById("widgets-searchbox").addEventListener("submit", (e) => {
   e.preventDefault();
   filters.search = document
@@ -56,9 +102,7 @@ document.getElementById("widgets-searchbox").addEventListener("submit", (e) => {
   applyFilters();
 });
 
-// =====================
-// 🔸 Setup sự kiện cho checkbox filters
-// =====================
+// Setup sự kiện cho checkbox filters
 function setupCheckboxEvents() {
   document.querySelectorAll("#filter-categories input").forEach((input) => {
     input.addEventListener("change", () => {
@@ -73,27 +117,16 @@ function setupCheckboxEvents() {
       applyFilters();
     });
   });
-
-  document.querySelectorAll("#filter-tags input").forEach((input) => {
-    input.addEventListener("change", () => {
-      filters.tags = getCheckedValues("#filter-tags input");
-      applyFilters();
-    });
-  });
 }
 
-// =====================
-// 🔸 Hàm hỗ trợ lấy các checkbox được chọn
-// =====================
+// Hàm hỗ trợ lấy các checkbox được chọn
 function getCheckedValues(selector) {
   return [...document.querySelectorAll(selector)]
     .filter((i) => i.checked)
     .map((i) => i.value);
 }
 
-// =====================
-// 🔸 Price Range + Debounce + Ghi vào filters
-// =====================
+// Price Range + Debounce + Ghi vào filters
 function setupPriceSlider() {
   const rangeInputs = document.querySelectorAll(".range-input input");
   const priceInputs = document.querySelectorAll(".price-input input");
@@ -163,9 +196,7 @@ function setupPriceSlider() {
   });
 }
 
-// =====================
-// 🔸 Lọc sản phẩm theo điều kiện biến filters
-// =====================
+// Lọc sản phẩm theo điều kiện biến filters
 function applyFilters() {
   const result = allProducts.filter((product) => {
     // Kiểm tra theo tên sản phẩm (search)
@@ -174,7 +205,7 @@ function applyFilters() {
     // Kiểm tra theo category (chỉ có 1 giá trị)
     const categoryMatch =
       filters.categories.length === 0 || // Nếu không chọn category => chấp nhận hết
-      filters.categories.includes(product.category); // Nếu chọn => kiểm tra có nằm trong danh sách đã chọn khôngkhông
+      filters.categories.includes(product.category); // Nếu chọn => kiểm tra có nằm trong danh sách đã chọn không
 
     // Kiểm tra theo color (nhiều giá trị trong mảng)
     const colorMatch =
@@ -208,26 +239,7 @@ function applyFilters() {
   renderProducts(result);
 }
 
-// =====================
-// 🔸 Hiển thị danh sách sản phẩm
-// =====================
-// function renderProducts(products) {
-//   const container = document.querySelector(".tab-content");
-//   container.innerHTML = products.length
-//     ? products
-//         .map(
-//           (p) => `
-//         <div class="product-card">
-//           <h3>${p.name}</h3>
-//           <p>Category: ${p.category}</p>
-//           <p>Color: ${p.color}</p>
-//           <p>Tag: ${p.tag}</p>
-//           <p>Price: $${p.price}</p>
-//         </div>`
-//         )
-//         .join("")
-//     : "<p>No products found.</p>";
-// }
+// Hiển thị danh sách sản phẩm
 let currentPage = 1;
 const productsPerPage = 12;
 let currentView = "grid"; // hoặc 'list'
@@ -236,7 +248,11 @@ let currentSort = "default";
 function renderProducts(products) {
   const container = document.querySelector(".tab-content");
 
-  // 👉 Sort trước khi paginate
+  // Cập nhật class view (grid-view hoặc list-view)
+  container.classList.remove("grid-view", "list-view");
+  container.classList.add(`${currentView}-view`);
+
+  // Sort trước khi paginate
   const sorted = [...products].sort((a, b) => {
     switch (currentSort) {
       case "sold":
@@ -254,32 +270,86 @@ function renderProducts(products) {
     }
   });
 
-  // 👉 Pagination
+  // Pagination
   const totalPages = Math.ceil(sorted.length / productsPerPage);
   const start = (currentPage - 1) * productsPerPage;
   const paginated = sorted.slice(start, start + productsPerPage);
 
-  // 👉 View format
+  // View format
   container.innerHTML = paginated.length
     ? paginated
-        .map((p) =>
-          currentView === "grid"
-            ? `
-              <div class="product-card grid-view">
-                <h3>${p.name}</h3>
-                <p>Price: $${p.price}</p>
-              </div>`
-            : `
-              <div class="product-card list-view">
-                <h3>${p.name}</h3>
-                <p>Category: ${p.category}</p>
-                <p>Colors: ${p.color}</p>
-                <p>Tags: ${p.tag}</p>
-                <p>Price: $${p.price}</p>
-                <p>Sold: ${p.sold}</p>
-                <p>Rating: ${p.rating}</p>
-              </div>`
-        )
+        .map((p) => {
+          const stars = Array.from(
+            { length: p.rating },
+            () => '<i class="bi bi-star-fill"></i>'
+          ).join("");
+
+          if (currentView === "grid") {
+            return `
+          <div class="product-card">
+            <div class="product-image"> 
+              <img src="${p["image-primary"]}" alt="${
+              p.name
+            }" class="primary-img" />
+              <img src="${p["image-secondary"]}" alt="${
+              p.name
+            }" class="secondary-img" />
+              <div class="product-add-action">
+                <ul>
+                  <div class="item-action">
+                    <li><a href="#"><i class="bi bi-heart"></i></a></li>
+                  </div>
+                  <div class="item-action">
+                    <li><a href="#"><i class="bi bi-eye"></i></a></li>
+                  </div>
+                  <div class="item-action">
+                    <li><a href="#"><i class="bi bi-cart"></i></a></li>
+                  </div>         
+                </ul>
+              </div>
+            </div>
+            <div class="product-content">
+              <a class="product-name">${p.name}</a>
+              <div class="price">
+                <span class="new-price">$${p.price.toFixed(2)}</span>
+              </div>
+              <div class="rating">${stars}</div>
+            </div> 
+          </div>`;
+          }
+
+          // list-view style
+          return `
+        <div class="product-card list-view">
+          <div class="product-image"> 
+              <img src="${p["image-primary"]}" 
+              alt="${p.name}" 
+              class="primary-img" />
+              
+              <img src="${p["image-secondary"]}" 
+              alt="${p.name}" 
+              class="secondary-img" />
+
+              <div class="product-list-content">
+                <h3 class="product-name">${p.name}</h3>
+                <p class="price">$${p.price.toFixed(2)}</p>
+                <div class="rating">${stars}</div>
+                <p class="product-description">${p.description}</p>
+                <ul class="item-action-list">
+                  <div class="item-action">
+                    <li><a href="#"><i class="bi bi-heart"></i></a></li>
+                  </div>
+                  <div class="item-action">
+                    <li><a href="#"><i class="bi bi-eye"></i></a></li>
+                  </div>
+                  <div class="item-action">
+                    <li><a href="#"><i class="bi bi-cart"></i></a></li>
+                  </div>         
+                </ul>
+              </div>
+          </div>
+        </div>`;
+        })
         .join("")
     : "<p>No products found.</p>";
 
@@ -306,26 +376,44 @@ document.getElementById("sortSelect").addEventListener("change", (e) => {
   applyFilters(); // Gọi lại lọc + render
 });
 
-// 📌 Pagination:
+// Pagination:
 function renderPagination(totalPages) {
   const container = document.querySelector(".pagination-area");
   let buttons = "";
+
+  // Prev button
+  buttons += `<button class="page-btn prev-btn" ${
+    currentPage === 1 ? "disabled" : ""
+  } data-page="${currentPage - 1}">&laquo;</button>`;
+
+  // Số trang
   for (let i = 1; i <= totalPages; i++) {
     buttons += `<button class="page-btn ${
       i === currentPage ? "active" : ""
     }" data-page="${i}">${i}</button>`;
   }
+
+  // Next button
+  buttons += `<button class="page-btn next-btn" ${
+    currentPage === totalPages ? "disabled" : ""
+  } data-page="${currentPage + 1}">&raquo;</button>`;
+
+  // Gán HTML
   container.innerHTML = buttons;
 
+  // Gán sự kiện click
   document.querySelectorAll(".page-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
-      currentPage = parseInt(btn.dataset.page);
-      applyFilters(); // render lại trang mới
+      const page = parseInt(btn.dataset.page);
+
+      // Bảo vệ không vượt ngoài range
+      if (!isNaN(page) && page >= 1 && page <= totalPages) {
+        currentPage = page;
+        applyFilters(); // render lại trang mới
+      }
     });
   });
 }
 
-// =====================
-// 🔸 Gọi khởi tạo khi load trang
-// =====================
+// Gọi khởi tạo khi load trang
 loadFilters();
