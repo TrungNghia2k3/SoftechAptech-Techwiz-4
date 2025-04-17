@@ -1,0 +1,214 @@
+.account-area {
+  padding: 100px 0;
+}
+
+.account-area .content {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-area .content .row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.account-area .content .row .col-3 {
+  width: 25%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.account-area .content .row .col-9 {
+  width: 75%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.my-account-tab-nav {
+  list-style: none;
+}
+
+.nav-item {
+  border-bottom: 1px solid #444444;
+  display: block;
+  background: #2c2c2c;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
+.nav-item.active {
+  background-color: var(--green);
+  color: white;
+  font-weight: bold;
+}
+
+.nav-item.active:hover {
+  color: white;
+}
+
+.nav-item:hover {
+  color: var(--green);
+}
+
+.nav-item.logout a {
+  color: white;
+  text-decoration: none;
+}
+
+.tab-content {
+  width: 100%;
+  border: 1px solid #dee2e6;
+  padding: 30px;
+  transition: all 0.3s ease 0s;
+}
+
+.tab-content .tab-pane {
+  display: none;
+  background-color: white;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.account-dashboard p {
+  margin-bottom: 20px;
+}
+
+.account-dashboard p:last-child {
+  margin-bottom: 0;
+}
+
+.account-dashboard a {
+  color: black;
+  text-decoration: none;
+}
+
+.account-dashboard a:hover {
+  color: var(--green);
+}
+
+.account-orders .small-title {
+  margin-bottom: 15px;
+}
+
+.account-orders table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.account-orders table th {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #dee2e6;
+  text-align: center;
+}
+
+.account-orders table td {
+  padding: 8px;
+  border: 1px solid #dee2e6;
+  text-align: center;
+}
+
+.account-orders-table tr {
+  transition: background-color 0.3s ease;
+}
+
+.account-orders-table tr:hover {
+  background-color: #ececec;
+}
+
+.account-orders-table tr td a {
+  color: black;
+  text-decoration: none;
+}
+
+.account-orders-table tr td a:hover {
+  color: var(--green);
+}
+
+.account-orders-table tr td button {
+  background-color: black;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.account-orders-table tr td button:hover {
+  background-color: #424649;
+}
+
+.account-address p {
+  margin-bottom: 16px;
+}
+
+.account-address .content .col {
+  padding: 0 15px;
+}
+
+.account-address .content .col .small-title {
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.account-address .content .col address {
+  margin-bottom: 16px;
+  font-style: normal;
+  line-height: inherit;
+  width: 100%;
+}
+
+.my-account-form .group-input {
+  display: flex;
+  width: 100%;
+}
+
+.form-field:first-child {
+  margin-right: 15px;
+}
+
+.form-field {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-field .input-field {
+  padding: 0 15px;
+  border: 1px solid #dee2e6;
+  height: 40px;
+  width: 100%;
+  outline: none;
+}
+
+.my-account-button-wrap {
+  margin-top: 20px;
+}
+
+.btn-custom-size {
+  width: 165px;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 23.5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+}

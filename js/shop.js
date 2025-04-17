@@ -287,67 +287,76 @@ function renderProducts(products) {
           if (currentView === "grid") {
             return `
           <div class="product-card">
-            <div class="product-image"> 
-              <img src="${p["image-primary"]}" alt="${
-              p.name
-            }" class="primary-img" />
-              <img src="${p["image-secondary"]}" alt="${
-              p.name
-            }" class="secondary-img" />
-              <div class="product-add-action">
-                <ul>
-                  <div class="item-action">
-                    <li><a href="#"><i class="bi bi-heart"></i></a></li>
-                  </div>
-                  <div class="item-action">
-                    <li><a href="#"><i class="bi bi-eye"></i></a></li>
-                  </div>
-                  <div class="item-action">
-                    <li><a href="#"><i class="bi bi-cart"></i></a></li>
-                  </div>         
-                </ul>
+            <a href="product-detail.html?id=${p.id}">
+              <div class="product-image"> 
+                <img src="${p["image-primary"]}" 
+                alt="${p.name}" 
+                class="primary-img" />
+                
+                <img src="${p["image-secondary"]}"
+                alt="${p.name}" 
+                class="secondary-img" />
+                
+                <div class="product-add-action">
+                  <ul>
+                    <div class="item-action">
+                      <li><a href="#"><i class="bi bi-heart"></i></a></li>
+                    </div>
+                    <div class="item-action">
+                      <li><a href="#"><i class="bi bi-eye"></i></a></li>
+                    </div>
+                    <div class="item-action">
+                      <li><a href="#"><i class="bi bi-cart"></i></a></li>
+                    </div>         
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div class="product-content">
-              <a class="product-name">${p.name}</a>
-              <div class="price">
-                <span class="new-price">$${p.price.toFixed(2)}</span>
+              <div class="product-content">
+                <a class="product-name" href="product-detail.html?id=${p.id}">${p.name}</a>
+                <div class="price">
+                  <span class="new-price">$${p.price.toFixed(2)}</span>
+                </div>
+                <div class="rating">${stars}</div>
               </div>
-              <div class="rating">${stars}</div>
-            </div> 
+            </a> 
           </div>`;
           }
 
           // list-view style
           return `
         <div class="product-card list-view">
-          <div class="product-image"> 
-              <img src="${p["image-primary"]}" 
-              alt="${p.name}" 
-              class="primary-img" />
-              
-              <img src="${p["image-secondary"]}" 
-              alt="${p.name}" 
-              class="secondary-img" />
+            <div class="product-image"> 
+                <img src="${p["image-primary"]}" 
+                alt="${p.name}" 
+                class="primary-img" />
+                
+                <img src="${p["image-secondary"]}" 
+                alt="${p.name}" 
+                class="secondary-img" />
 
-              <div class="product-list-content">
-                <h3 class="product-name">${p.name}</h3>
-                <p class="price">$${p.price.toFixed(2)}</p>
-                <div class="rating">${stars}</div>
-                <p class="product-description">${p.description}</p>
-                <ul class="item-action-list">
-                  <div class="item-action">
-                    <li><a href="#"><i class="bi bi-heart"></i></a></li>
-                  </div>
-                  <div class="item-action">
-                    <li><a href="#"><i class="bi bi-eye"></i></a></li>
-                  </div>
-                  <div class="item-action">
-                    <li><a href="#"><i class="bi bi-cart"></i></a></li>
-                  </div>         
-                </ul>
-              </div>
-          </div>
+                <div class="product-list-content">
+                  
+                  <h3 class="product-name">
+                    <a href="product-detail.html?id=${p.id}">
+                      ${p.name}
+                    </a>
+                  </h3>
+                  <p class="price">$${p.price.toFixed(2)}</p>
+                  <div class="rating">${stars}</div>
+                  <p class="product-description">${p.description}</p>
+                  <ul class="item-action-list">
+                    <div class="item-action">
+                      <li><a href="#"><i class="bi bi-heart"></i></a></li>
+                    </div>
+                    <div class="item-action">
+                      <li><a href="#"><i class="bi bi-eye"></i></a></li>
+                    </div>
+                    <div class="item-action">
+                      <li><a href="#"><i class="bi bi-cart"></i></a></li>
+                    </div>         
+                  </ul>
+                </div>
+            </div>
         </div>`;
         })
         .join("")

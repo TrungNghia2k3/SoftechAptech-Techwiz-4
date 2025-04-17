@@ -75,6 +75,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const filteredProducts = filterProducts(activeTab);
     const tabContent = document.getElementById("tabContent");
 
+    // Lấy wishlist hiện tại từ localStorage
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
     tabContent.innerHTML = filteredProducts
       .map((product) => {
         const stars = Array.from(
@@ -82,38 +85,56 @@ document.addEventListener("DOMContentLoaded", async () => {
           () => '<i class="bi bi-star-fill"></i>'
         ).join("");
 
+        // Kiểm tra xem product này có trong wishlist không
+        const isInWishlist = wishlist.includes(product.id);
+
         return `
-        <div class="product-card">
-          <div class="product-image"> 
-            <img src="${product["image-primary"]}" alt="${
+            <div class="product-card">
+              <div class="product-image"> 
+                <a href="product-detail.html?id=${product.id}">
+                  <img src="${product["image-primary"]}" alt="${
           product.name
         }" class="primary-img" />
-            <img src="${product["image-secondary"]}" alt="${
+                  <img src="${product["image-secondary"]}" alt="${
           product.name
         }" class="secondary-img" />
-            <div class="product-add-action">
-              <ul>
-                <div class="item-action">
-                    <li><a href="#"><i class="bi bi-heart"></i></a></li>
+                </a>
+
+                <div class="product-add-action">
+                  <ul>
+                    <div class="item-action ${isInWishlist ? "active" : ""}">
+                      <li>
+                        <a class="add-to-wishlist" data-id="${product.id}">
+                          <i class="bi bi-heart"></i>
+                        </a>
+                      </li>
+                    </div>
+                    <div class="item-action">
+                      <li><a href="#"><i class="bi bi-eye"></i></a></li>
+                    </div>
+                    <div class="item-action">
+                      <li>
+                        <a class="add-to-cart" data-id="${product.id}">
+                          <i class="bi bi-cart"></i>
+                        </a>
+                      </li>
+                    </div>         
+                  </ul>
                 </div>
-                <div class="item-action">
-                    <li><a href="#"><i class="bi bi-eye"></i></a></li>
+              </div>
+
+              <div class="product-content">
+                <a  class="product-name" 
+                    href="product-detail.html?id=${product.id}">
+                  ${product.name}
+                </a>
+                <div class="price">
+                  <span class="new-price">$${product.price.toFixed(2)}</span>
                 </div>
-                <div class="item-action">
-                    <li><a href="#"><i class="bi bi-cart"></i></a></li>
-                </div>         
-              </ul>
+                <div class="rating">${stars}</div>
+              </div>
             </div>
-          </div>
-          <div class="product-content">
-            <a class="product-name">${product.name}</a>
-            <div class="price">
-              <span class="new-price">$${product.price.toFixed(2)}</span>
-            </div>
-            <div class="rating">${stars}</div>
-          </div> 
-        </div>
-      `;
+        `;
       })
       .join("");
   }
@@ -152,34 +173,40 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         return `
         <div class="product-card">
-          <div class="product-image"> 
-            <img src="${product["image-primary"]}" alt="${
-          product.name
-        }" class="primary-img" />
-            <img src="${product["image-secondary"]}" alt="${
-          product.name
-        }" class="secondary-img" />
-            <div class="product-add-action">
-              <ul>
-                <div class="item-action">
-                    <li><a href="#"><i class="bi bi-heart"></i></a></li>
-                </div>
-                <div class="item-action">
-                    <li><a href="#"><i class="bi bi-eye"></i></a></li>
-                </div>
-                <div class="item-action">
-                    <li><a href="#"><i class="bi bi-cart"></i></a></li>
-                </div>         
-              </ul>
+          <a href="product-detail.html?id=${product.id}">
+            <div class="product-image"> 
+              <img  src="${product["image-primary"]}" 
+                    alt="${product.name}" 
+                    class="primary-img" />
+              
+              <img  src="${product["image-secondary"]}" 
+                    alt="${product.name}" 
+                    class="secondary-img" />
+
+              <div class="product-add-action">
+                <ul>
+                  <div class="item-action">
+                      <li><a href="#"><i class="bi bi-heart"></i></a></li>
+                  </div>
+                  <div class="item-action">
+                      <li><a href="#"><i class="bi bi-eye"></i></a></li>
+                  </div>
+                  <div class="item-action">
+                      <li><a href="#"><i class="bi bi-cart"></i></a></li>
+                  </div>         
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="product-content">
-            <a class="product-name">${product.name}</a>
-            <div class="price">
-              <span class="new-price">$${product.price.toFixed(2)}</span>
+            <div class="product-content">
+              <a class="product-name" href="product-detail.html?id=${
+                product.id
+              }">${product.name}</a>
+              <div class="price">
+                <span class="new-price">$${product.price.toFixed(2)}</span>
+              </div>
+              <div class="rating">${stars}</div>
             </div>
-            <div class="rating">${stars}</div>
-          </div> 
+          </a>
         </div>
       `;
       })
@@ -191,7 +218,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     // Fetch dữ liệu từ data.json
-    const response = await fetch("/data.json");
+    const response = await fetch("data.json");
     const data = await response.json();
 
     // Gọi hàm render testimonials

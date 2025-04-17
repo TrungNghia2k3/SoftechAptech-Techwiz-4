@@ -1,0 +1,76 @@
+.wishlist-area {
+  padding: 100px 0;
+}
+
+.wishlist-area .content {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0px 8px;
+}
+
+.wishlist-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.wishlist-table th {
+  border-top: medium none;
+  font-size: 15px;
+  text-transform: capitalize;
+  padding: 20px 10px;
+  text-align: center;
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.wishlist-table th,
+.wishlist-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.wishlist-table td.product-remove .remove-item {
+  cursor: pointer;
+}
+
+.wishlist-table td.product-thumbnail {
+  width: 25%;
+}
+
+.wishlist-table td.product-thumbnail a img {
+  width: 40%;
+  height: 40%;
+}
+
+.wishlist-table td.product-name {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.wishlist-table td.product-name a {
+  color: #525252;
+  text-decoration: none;
+}
+
+.wishlist-table td.product-price {
+  font-size: 16px;
+}
+
+.wishlist-table td button {
+  font-size: 14px;
+  text-transform: uppercase;
+  background: #505050;
+  border: #505050;
+  color: #ffffff;
+  line-height: 43px;
+  width: 130px;
+  cursor: pointer;
+}
+
+.wishlist-table td button:hover {
+  background: var(--green);
+  color: white;
+  border: 1px solid var(--green);
+}

@@ -7,42 +7,13 @@
   <link rel="icon" href="/assets/images/logo.png" />
   <title>Pronia - Plant Shop</title>
   <link rel="stylesheet" href="/css/base.css" />
-  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/cart.css" />
   <link rel="stylesheet" href="/css/base.responsive.css" />
-  <link rel="stylesheet" href="/css/index.responsive.css" />
+  <link rel="stylesheet" href="/css/cart.responsive.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
 </head>
 
 <body>
-
-  <div id="offcanvas-overlay" class="offcanvas-overlay"></div>
-  <!-- Offcanvas cart -->
-  <div id="offcanvas-cart" class="offcanvas-cart">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeOffCanvasCart()">&times;</a>
-
-    <div class="offcanvas-cart-header">
-      <h2>Shopping Cart</h2>
-    </div>
-
-    <div class="offcanvas-cart-content">
-      <div class="offcanvas-cart-item-list" id="offcanvas-cart-item-list"></div>
-
-      <div class="offcanvas-cart-summary">
-        <p>Subtotal: $<span id="cart-subtotal">0.00</span></p>
-      </div>
-
-      <div class="offcanvas-cart-actions">
-        <button class="btn btn-primary" id="checkout-btn">
-          <a href="checkout.html">Checkout</a>
-        </button>
-        <button class="btn btn-secondary">
-          <a href="cart.html">Cart</a>
-        </button>
-      </div>
-
-    </div>
-  </div>
-  <!-- Offcanvas cart -->
 
   <div id="toast-container"></div>
 
@@ -201,7 +172,7 @@
               <i class="bi bi-heart"></i>
             </a>
             <div class="shopping-cart">
-              <a onclick="openOffCanvasCart()">
+              <a href="cart.html">
                 <i class="bi bi-cart"></i>
                 <span class="cart-count"></span>
               </a>
@@ -257,242 +228,46 @@
   </header>
   <!-- Header -->
 
-  <!-- Carousel -->
-  <section class="carousel">
-    <div class="slider">
-      <div class="slide active">
-        <div class="content">
-          <div class="content-left">
-            <span class="offer">65% OFF</span>
-            <h2 class="title">NEW PLANT</h2>
-            <p class="short-description">
-              Pronia, With 100% Natural, Organic & Plant Shop.
-            </p>
-            <button class="btn btn-primary content-left-btn">
-              <a href="#">Discover Now</a>
-            </button>
-          </div>
-          <div class="content-right">
-            <img src="/assets/images/slide-1.png" alt="Slide 1" />
-          </div>
-        </div>
-      </div>
-      <div class="slide">
-        <div class="content">
-          <div class="content-left">
-            <span class="offer">65% OFF</span>
-            <h2 class="title">NEW PLANT</h2>
-            <p class="short-description">
-              Pronia, With 100% Natural, Organic & Plant Shop.
-            </p>
-            <button class="btn btn-primary content-left-btn">
-              <a href="#">Discover Now</a>
-            </button>
-          </div>
-          <div class="content-right">
-            <img src="/assets/images/slide-2.png" alt="Slide 2" />
-          </div>
-        </div>
-      </div>
-      <!-- Nút điều hướng -->
-      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-      <button class="next" onclick="changeSlide(1)">&#10095;</button>
-    </div>
-  </section>
-  <!-- Carousel -->
-
-  <!-- Shipping area -->
-  <section class="shipping-area">
+  <!-- Breadcrumb area -->
+  <section class="breadcrumb-area">
     <div class="content">
-      <div class="shipping-item">
-        <div class="shipping-img">
-          <img src="/assets/images/shipping-1.png" alt="Shipping 1" />
-        </div>
-        <div class="shipping-content">
-          <h2 class="title">Free Shipping</h2>
-          <p class="short-description">Capped at $319 per order</p>
-        </div>
-      </div>
-      <div class="shipping-item">
-        <div class="shipping-img">
-          <img src="/assets/images/shipping-2.png" alt="Shipping 2" />
-        </div>
-        <div class="shipping-content">
-          <h2 class="title">Safe Payment</h2>
-          <p class="short-description">With our payment gateway</p>
-        </div>
-      </div>
-      <div class="shipping-item">
-        <div class="shipping-img">
-          <img src="/assets/images/shipping-3.png" alt="Shipping 3" />
-        </div>
-        <div class="shipping-content">
-          <h2 class="title">Best Services</h2>
-          <p class="short-description">Friendly & Supper Services</p>
-        </div>
+      <div class="breadcrumb-item">
+        <h2 class="breadcrumb-heading">Cart</h2>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li>Cart</li>
+        </ul>
       </div>
     </div>
   </section>
-  <!-- Shipping area -->
+  <!-- Breadcrumb area -->
 
-  <!-- Product area -->
-  <section class="product-area">
+
+  <!-- Cart area -->
+  <section class="cart-area">
     <div class="content">
-      <div class="section-title">
-        <h2>Our Products</h2>
-      </div>
 
-      <ul class="product-tab-nav" id="product-tab-nav" role="tablist">
-        <li class="nav-item active" data-target="#featured" role="tab" aria-controls="featured" aria-selected="true">
-          Featured
-        </li>
-        <li class="nav-item" data-target="#best-seller" role="tab" aria-controls="best-seller" aria-selected="false">
-          Bestseller
-        </li>
-        <li class="nav-item" data-target="#latest" role="tab" aria-controls="latest" aria-selected="false">
-          Latest
-        </li>
-      </ul>
+      <!-- Giỏ hàng -->
+      <table class="cart-table">
+        <tbody class="cart-table-body"></tbody>
+      </table>
 
-      <div class="product-tab-content" id="tabContent"></div>
-    </div>
-  </section>
-  <!-- Product area -->
+      <!-- Nút cập nhật -->
+      <button id="updateCartBtn">Update Cart</button>
 
-  <!-- Banner area -->
-  <section class="banner-area">
-    <div class="content">
-      <div class="banner-item img-hover-effect banner-one">
-        <div class="banner-img">
-          <img src="/assets/images/banner-1.png" alt="Banner 1" />
+      <!-- Nút thanh toán -->
+      <div class="cart-checkout">
+        <div class="cart-checkout-left">
+          <a href="/shop.html" class="continue-shopping">Continue Shopping</a>
         </div>
-        <div class="banner-content text-position-left">
-          <span class="collection">Collection Of Cactus</span>
-          <h3 class="title">
-            Pottery Pots & <br />
-            Plant
-          </h3>
-          <button class="btn btn-primary btn-banner">
-            <a href="#">Shop Now</a>
+        <div class="cart-checkout-right">
+          <button id="checkoutBtn">
+           <a href="/checkout.html">Proceed to Checkout</a>  
           </button>
         </div>
       </div>
-
-      <div class="banner-item img-hover-effect banner-two">
-        <div class="banner-img">
-          <img src="/assets/images/banner-2.png" alt="Banner 2" class="img-responsive" />
-        </div>
-        <div class="banner-content text-position-center">
-          <span class="collection">New Collection</span>
-          <h3 class="title">Plant Port</h3>
-          <button class="btn btn-primary btn-banner">
-            <a href="#">Shop Now</a>
-          </button>
-        </div>
-      </div>
-
-      <div class="banner-item img-hover-effect banner-three">
-        <div class="banner-img">
-          <img src="/assets/images/banner-3.png" alt="Banner 3" class="img-responsive" />
-        </div>
-        <div class="banner-content text-position-center">
-          <span class="collection">New Collection</span>
-          <h3 class="title">Plant Port</h3>
-          <button class="btn btn-primary btn-banner">
-            <a href="#">Shop Now</a>
-          </button>
-        </div>
-      </div>
-
-      <div class="banner-item img-hover-effect banner-four">
-        <div class="banner-img">
-          <img src="/assets/images/banner-4.png" alt="Banner 4" />
-        </div>
-        <div class="banner-content text-position-left">
-          <span class="collection">Collection Of Cactus</span>
-          <h3 class="title">
-            Hanging Pots & <br />
-            Plant
-          </h3>
-          <button class="btn btn-primary btn-banner">
-            <a href="#">Shop Now</a>
-          </button>
-        </div>
-      </div>
-    </div>
   </section>
-  <!-- Banner area -->
-
-  <!-- New products area -->
-  <div class="new-products">
-    <div class="content">
-      <div class="section-title">
-        <h2>New Products</h2>
-      </div>
-      <p class="section-desc">
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It
-        has roots in a piece of classical Latin literature
-      </p>
-
-      <div class="new-products-list" id="new-products-list"></div>
-    </div>
-  </div>
-  <!-- New products area -->
-
-  <!-- Testimonial area -->
-  <section class="testimonial-area">
-    <div class="testimonial-bg">
-      <div class="section-title">
-        <h2>What Say Client</h2>
-      </div>
-      <p class="section-desc">
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It
-        has roots in a piece of classical Latin literature
-      </p>
-    </div>
-    <div class="content">
-      <div class="testimonial-list" id="testimonial-list"></div>
-    </div>
-  </section>
-  <!-- Testimonial area -->
-
-  <!-- Brand area -->
-  <section class="brand-area">
-    <div class="content">
-      <div class="brand-item">
-        <img src="/assets/images/brand-1.png" alt="brand-1" />
-      </div>
-      <div class="brand-item">
-        <img src="/assets/images/brand-2.png" alt="brand-2" />
-      </div>
-      <div class="brand-item">
-        <img src="/assets/images/brand-3.png" alt="brand-3" />
-      </div>
-      <div class="brand-item">
-        <img src="/assets/images/brand-4.png" alt="brand-4" />
-      </div>
-      <div class="brand-item">
-        <img src="/assets/images/brand-5.png" alt="brand-5" />
-      </div>
-    </div>
-  </section>
-  <!-- Brand area -->
-
-  <!-- Blog area -->
-  <section class="blog-area">
-    <div class="content">
-      <div class="section-title">
-        <h2>Latest Blog</h2>
-      </div>
-      <p class="section-desc">
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It
-        has roots in a piece of classical Latin literature
-      </p>
-
-      <div class="blog-list" id="blog-list"></div>
-    </div>
-  </section>
-  <!-- Blog area -->
+  <!-- Cart area -->
 
   <!-- Footer -->
   <footer>
@@ -585,7 +360,7 @@
   <!-- Footer -->
 
   <script src="/js/base.js"></script>
-  <script src="/js/index.js"></script>
+  <script src="/js/cart.js"></script>
 </body>
 
 </html>

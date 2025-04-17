@@ -1,0 +1,126 @@
+/* Contact Form */
+.contact-form-area {
+  padding: 100px 0;
+}
+
+.contact-form-area .content {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-wrap {
+  display: flex;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.contact-wrap .contact-info {
+  background-image: url(../assets/images/contact-form-bg.png);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 35px 40px;
+  width: 370px;
+  min-height: 500px;
+  color: white;
+}
+
+.contact-info .contact-title {
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.contact-info .contact-description {
+  margin-bottom: 35px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.contact-info .contact-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-list li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.contact-list li {
+  display: flex;
+  align-items: center;
+}
+
+.contact-list li i {
+  background-color: rgb(255, 255, 255);
+  color: #abd373;
+  border-radius: 100%;
+  font-size: 25px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.contact-list li a {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.contact-wrap .contact-form {
+  padding: 50px 40px;
+  width: calc(100% - 370px);
+}
+
+.group-input {
+  display: flex;
+}
+
+.form-field {
+  width: 100%;
+  margin-right: 30px;
+}
+
+.input-field,
+.textarea-field {
+  border: 0;
+  border-bottom: 1px solid #dee2e6;
+  font-weight: 400;
+  color: #8d8d8c;
+  line-height: 45px;
+  font-style: italic;
+  outline: none;
+}
+
+.input-field {
+  width: 350px;
+  height: 45px;
+}
+
+.textarea-field {
+  width: 100%;
+}
+
+.contact-button-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-custom-size {
+  width: 210px;
+  height: 65px;
+  line-height: 65px;
+  font-size: 16px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contact Form */

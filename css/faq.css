@@ -28,6 +28,10 @@
     font-weight: 500;
 }
 
+.frequently-area .row {
+    display: flex;
+}
+
 .frequently-area .row .col-6 {
     padding-left: 15px;
     padding-right: 15px;

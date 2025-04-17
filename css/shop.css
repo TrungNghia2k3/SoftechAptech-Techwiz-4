@@ -13,15 +13,16 @@
 .shop-area .content .row {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
-.row .col-3 {
+.shop-area .content .row .col-3 {
     flex: 0 0 25%;
     max-width: 25%;
     padding: 0px 8px;
 }
 
-.row .col-9 {
+.shop-area .content .row .col-9 {
     flex: 0 0 75%;
     max-width: 75%;
     padding: 0px 8px;
@@ -356,6 +357,15 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 20px;
     margin-bottom: 5px;
     font-weight: 400;
+}
+
+.product-name a {
+    text-decoration: none;
+    color: #000;
+}
+
+.product-name a:hover {
+    color: var(--green);
 }
 
 .product-list-content .price {
