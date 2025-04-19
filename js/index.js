@@ -36,18 +36,6 @@ setInterval(() => changeSlide(1), 10000);
 // Hiển thị slide đầu tiên
 showSlide(currentSlide);
 
-// FETCH DỮ LIỆU SẢN PHẨM
-async function fetchProducts() {
-  try {
-    const response = await fetch("data.json");
-    const data = await response.json();
-    return data.products;
-  } catch (error) {
-    console.error("Lỗi khi tải dữ liệu:", error);
-    return [];
-  }
-}
-
 // XỬ LÝ TAB SẢN PHẨM
 document.addEventListener("DOMContentLoaded", async () => {
   let products = [];
@@ -110,7 +98,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                       </li>
                     </div>
                     <div class="item-action">
-                      <li><a href="#"><i class="bi bi-eye"></i></a></li>
+                      <li>
+                        <a data-id="${product.id}">
+                          <i class="bi bi-eye"></i>
+                        </a>
+                      </li>
                     </div>
                     <div class="item-action">
                       <li>
@@ -159,7 +151,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function renderNewProducts() {
     const newProductsList = document.getElementById("new-products-list");
-
+    
+    // Lấy wishlist hiện tại từ localStorage
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    
     const newProducts = [...products]
       .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
       .slice(0, 4);
@@ -170,6 +165,9 @@ document.addEventListener("DOMContentLoaded", async () => {
           { length: product.rating },
           () => '<i class="bi bi-star-fill"></i>'
         ).join("");
+
+        // Kiểm tra xem product này có trong wishlist không
+        const isInWishlist = wishlist.includes(product.id);
 
         return `
         <div class="product-card">
@@ -182,19 +180,26 @@ document.addEventListener("DOMContentLoaded", async () => {
               <img  src="${product["image-secondary"]}" 
                     alt="${product.name}" 
                     class="secondary-img" />
-
               <div class="product-add-action">
-                <ul>
-                  <div class="item-action">
-                      <li><a href="#"><i class="bi bi-heart"></i></a></li>
-                  </div>
-                  <div class="item-action">
+                  <ul>
+                    <div class="item-action ${isInWishlist ? "active" : ""}">
+                      <li>
+                        <a class="add-to-wishlist" data-id="${product.id}">
+                          <i class="bi bi-heart"></i>
+                        </a>
+                      </li>
+                    </div>
+                    <div class="item-action">
                       <li><a href="#"><i class="bi bi-eye"></i></a></li>
-                  </div>
-                  <div class="item-action">
-                      <li><a href="#"><i class="bi bi-cart"></i></a></li>
-                  </div>         
-                </ul>
+                    </div>
+                    <div class="item-action">
+                      <li>
+                        <a class="add-to-cart" data-id="${product.id}">
+                          <i class="bi bi-cart"></i>
+                        </a>
+                      </li>
+                    </div>         
+                  </ul>
               </div>
             </div>
             <div class="product-content">

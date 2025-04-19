@@ -275,6 +275,9 @@ function renderProducts(products) {
   const start = (currentPage - 1) * productsPerPage;
   const paginated = sorted.slice(start, start + productsPerPage);
 
+  // Lấy wishlist hiện tại từ localStorage
+  const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
   // View format
   container.innerHTML = paginated.length
     ? paginated
@@ -283,6 +286,9 @@ function renderProducts(products) {
             { length: p.rating },
             () => '<i class="bi bi-star-fill"></i>'
           ).join("");
+
+          // Kiểm tra xem product này có trong wishlist không
+          const isInWishlist = wishlist.includes(p.id);
 
           if (currentView === "grid") {
             return `
@@ -299,20 +305,30 @@ function renderProducts(products) {
                 
                 <div class="product-add-action">
                   <ul>
-                    <div class="item-action">
-                      <li><a href="#"><i class="bi bi-heart"></i></a></li>
+                    <div class="item-action ${isInWishlist ? "active" : ""}">
+                      <li>
+                        <a class="add-to-wishlist" data-id="${p.id}">
+                          <i class="bi bi-heart"></i>
+                        </a>
+                      </li>
                     </div>
                     <div class="item-action">
                       <li><a href="#"><i class="bi bi-eye"></i></a></li>
                     </div>
                     <div class="item-action">
-                      <li><a href="#"><i class="bi bi-cart"></i></a></li>
+                      <li>
+                        <a class="add-to-cart" data-id="${p.id}">
+                          <i class="bi bi-cart"></i>
+                        </a>
+                      </li>
                     </div>         
                   </ul>
                 </div>
               </div>
               <div class="product-content">
-                <a class="product-name" href="product-detail.html?id=${p.id}">${p.name}</a>
+                <a class="product-name" href="product-detail.html?id=${p.id}">${
+              p.name
+            }</a>
                 <div class="price">
                   <span class="new-price">$${p.price.toFixed(2)}</span>
                 </div>
@@ -324,7 +340,7 @@ function renderProducts(products) {
 
           // list-view style
           return `
-        <div class="product-card list-view">
+          <div class="product-card list-view">
             <div class="product-image"> 
                 <img src="${p["image-primary"]}" 
                 alt="${p.name}" 
@@ -345,19 +361,27 @@ function renderProducts(products) {
                   <div class="rating">${stars}</div>
                   <p class="product-description">${p.description}</p>
                   <ul class="item-action-list">
-                    <div class="item-action">
-                      <li><a href="#"><i class="bi bi-heart"></i></a></li>
+                    <div class="item-action ${isInWishlist ? "active" : ""}">
+                      <li>
+                        <a class="add-to-wishlist" data-id="${p.id}">
+                          <i class="bi bi-heart"></i>
+                        </a>
+                      </li>
                     </div>
                     <div class="item-action">
                       <li><a href="#"><i class="bi bi-eye"></i></a></li>
                     </div>
                     <div class="item-action">
-                      <li><a href="#"><i class="bi bi-cart"></i></a></li>
+                      <li>
+                        <a class="add-to-cart" data-id="${p.id}">
+                          <i class="bi bi-cart"></i>
+                        </a>
+                      </li>
                     </div>         
                   </ul>
                 </div>
             </div>
-        </div>`;
+          </div>`;
         })
         .join("")
     : "<p>No products found.</p>";

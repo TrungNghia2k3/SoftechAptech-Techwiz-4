@@ -14,6 +14,126 @@
 </head>
 
 <body>
+    <!-- Offcanvas cart -->
+    <div id="offcanvas-overlay" class="offcanvas-overlay"></div>
+    <div id="offcanvas-cart" class="offcanvas-cart">
+        <div class="offcanvas-cart-header">
+            <h4 class="title">Shopping Cart</h4>
+            <a class="closebtn" onclick="closeOffCanvasCart()">&times;</a>
+        </div>
+
+        <div class="offcanvas-cart-content">
+            <div class="offcanvas-cart-item-list" id="offcanvas-cart-item-list"></div>
+
+            <div class="offcanvas-cart-summary">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">0.00</span>
+            </div>
+
+            <div class="offcanvas-cart-actions">
+                <button class="offcanvas-btn">
+                    <a href="cart.html">View Cart</a>
+                </button>
+
+                <button class="offcanvas-btn" id="checkout-btn">
+                    <a href="checkout.html">Checkout</a>
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <!-- Offcanvas cart -->
+
+    <div id="toast-container"></div>
+
+    <!-- The Modal -->
+    <div id="searchModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <span class="searchbox-info">Start typing and press Enter to search</span>
+                <form action="#" class="hm-searchbox">
+                    <input type="text" name="search-modal" id="search-modal" placeholder="Search" />
+                    <button class="search-btn" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkbox toggle -->
+    <input type="checkbox" id="check" />
+
+    <!-- Nút mở sidebar cho điện thoại -->
+    <label for="check" class="checkbtn">
+        <i class="bi bi-list"></i>
+    </label>
+
+    <!-- Sidebar menu -->
+    <div class="sidebar-menu">
+        <!-- Nút đóng -->
+        <label for="check" class="close-btn">
+            <i class="bi bi-x"></i>
+        </label>
+
+        <div class="sidebar-menu-contact">
+            <div class="contact-icon">
+                <i class="bi bi-telephone"></i>
+            </div>
+            <p>+00 123 456 789</p>
+        </div>
+
+        <div class="sidebar-user-info">
+            <ul class="sidebar-user-info-list">
+                <li class="sidebar-user-info-item">
+                    <div class="dropdown">
+                        <button onclick="toggleDropdown(this)" class="dropbtn" data-id="language">
+                            English
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+
+                        <ul class="dropdown-content" data-id="language">
+                            <li><a href="#">French</a></li>
+                            <li><a href="#">Italian</a></li>
+                            <li><a href="#">Spanish</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="sidebar-user-info-item">
+                    <div class="dropdown">
+                        <button onclick="toggleDropdown(this)" class="dropbtn" data-id="currency">
+                            USD
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+
+                        <ul class="dropdown-content" data-id="currency">
+                            <li><a href="#">GBP</a></li>
+                            <li><a href="#">ISO</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="sidebar-user-info-item">
+                    <i class="bi bi-people"></i>
+                </li>
+                <li class="sidebar-user-info-item">
+                    <i class="bi bi-heart"></i>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="sidebar-menu-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
+            <li><a href="/faq">FAQ</a></li>
+        </ul>
+    </div>
+
     <!-- Header -->
     <header id="main-header">
         <!-- Phần header ban đầu -->
@@ -25,7 +145,8 @@
                     </div>
                     <div class="header-top-right">
                         <div class="dropdown">
-                            <button onclick="toggleDropdown(this)" class="dropbtn" data-id="currency">USD
+                            <button onclick="toggleDropdown(this)" class="dropbtn" data-id="currency">
+                                USD
                                 <i class="bi bi-chevron-down"></i>
                             </button>
                             <div class="dropdown-content" data-id="currency">
@@ -35,7 +156,8 @@
                         </div>
 
                         <div class="dropdown">
-                            <button onclick="toggleDropdown(this)" class="dropbtn" data-id="language">English
+                            <button onclick="toggleDropdown(this)" class="dropbtn" data-id="language">
+                                English
                                 <i class="bi bi-chevron-down"></i>
                             </button>
                             <div class="dropdown-content" data-id="language">
@@ -57,16 +179,32 @@
                     </div>
                     <div class="logo">
                         <a href="index.html">
-                            <img src="/assets/images/logo.png" alt="">
+                            <img src="/assets/images/logo.png" alt="" />
                         </a>
                     </div>
                     <div class="header-icon">
-                        <i class="bi bi-search"></i>
-                        <i class="bi bi-people"></i>
-                        <i class="bi bi-heart"></i>
+                        <!-- Trigger/Open The Modal -->
+                        <button class="searchBtn">
+                            <i class="bi bi-search"></i>
+                        </button>
+
+                        <div class="dropdown">
+                            <button onclick="toggleDropdown(this)" class="dropbtn" data-id="people">
+                                <i class="bi bi-people"></i>
+                            </button>
+                            <div class="dropdown-content" data-id="people">
+                                <a href="my-account.html">My Account</a>
+                                <a href="login-register.html">Login & Register</a>
+                            </div>
+                        </div>
+                        <a href="wishlist.html">
+                            <i class="bi bi-heart"></i>
+                        </a>
                         <div class="shopping-cart">
-                            <i class="bi bi-cart"></i>
-                            <span class="cart-count"></span>
+                            <a onclick="openOffCanvasCart()">
+                                <i class="bi bi-bag"></i>
+                                <span class="cart-count"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -91,7 +229,7 @@
             <div class="content">
                 <div class="header-sticky-left">
                     <a href="index.html">
-                        <img src="/assets/images/logo.png" alt="">
+                        <img src="/assets/images/logo.png" alt="" />
                     </a>
                 </div>
                 <div class="header-sticky-center">
@@ -106,12 +244,28 @@
                     </nav>
                 </div>
                 <div class="header-icon">
-                    <i class="bi bi-search"></i>
-                    <i class="bi bi-people"></i>
-                    <i class="bi bi-heart"></i>
+                    <!-- Trigger/Open The Modal -->
+                    <button class="searchBtn">
+                        <i class="bi bi-search"></i>
+                    </button>
+
+                    <div class="dropdown">
+                        <button onclick="toggleDropdown(this)" class="dropbtn" data-id="people">
+                            <i class="bi bi-people"></i>
+                        </button>
+                        <div class="dropdown-content" data-id="people">
+                            <a href="my-account.html">My Account</a>
+                            <a href="login-register.html">Login & Register</a>
+                        </div>
+                    </div>
+                    <a href="wishlist.html">
+                        <i class="bi bi-heart"></i>
+                    </a>
                     <div class="shopping-cart">
-                        <i class="bi bi-cart"></i>
-                        <span class="cart-count"></span>
+                        <a onclick="openOffCanvasCart()">
+                            <i class="bi bi-bag"></i>
+                            <span class="cart-count"></span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -183,6 +337,27 @@
         </div>
     </section>
     <!-- Shipping area -->
+
+    <!-- Video introduction area -->
+    <section class="video-introduction-area">
+        <div class="content">
+            <div class="video-thumbnail" onclick="openVideoPopup()">
+                <img src="/assets/images/video-thumbnail.png" alt="Video Thumbnail" />
+                <div class="play-button">
+                    <i class="bi bi-play-circle-fill"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Popup Modal -->
+    <div id="videoPopup" class="video-popup">
+        <div class="video-popup-content">
+            <span class="video-close" onclick="closeVideoPopup()">&times;</span>
+            <iframe id="videoFrame" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+    <!-- Video introduction area -->
 
     <!-- Team area -->
     <section class="team-area">

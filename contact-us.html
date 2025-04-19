@@ -15,6 +15,126 @@
 
 <body>
 
+    <!-- Offcanvas cart -->
+    <div id="offcanvas-overlay" class="offcanvas-overlay"></div>
+    <div id="offcanvas-cart" class="offcanvas-cart">
+        <div class="offcanvas-cart-header">
+            <h4 class="title">Shopping Cart</h4>
+            <a class="closebtn" onclick="closeOffCanvasCart()">&times;</a>
+        </div>
+
+        <div class="offcanvas-cart-content">
+            <div class="offcanvas-cart-item-list" id="offcanvas-cart-item-list"></div>
+
+            <div class="offcanvas-cart-summary">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">0.00</span>
+            </div>
+
+            <div class="offcanvas-cart-actions">
+                <button class="offcanvas-btn">
+                    <a href="cart.html">View Cart</a>
+                </button>
+
+                <button class="offcanvas-btn" id="checkout-btn">
+                    <a href="checkout.html">Checkout</a>
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <!-- Offcanvas cart -->
+
+    <div id="toast-container"></div>
+
+    <!-- The Modal -->
+    <div id="searchModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <span class="searchbox-info">Start typing and press Enter to search</span>
+                <form action="#" class="hm-searchbox">
+                    <input type="text" name="search-modal" id="search-modal" placeholder="Search" />
+                    <button class="search-btn" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkbox toggle -->
+    <input type="checkbox" id="check" />
+
+    <!-- Nút mở sidebar cho điện thoại -->
+    <label for="check" class="checkbtn">
+        <i class="bi bi-list"></i>
+    </label>
+
+    <!-- Sidebar menu -->
+    <div class="sidebar-menu">
+        <!-- Nút đóng -->
+        <label for="check" class="close-btn">
+            <i class="bi bi-x"></i>
+        </label>
+
+        <div class="sidebar-menu-contact">
+            <div class="contact-icon">
+                <i class="bi bi-telephone"></i>
+            </div>
+            <p>+00 123 456 789</p>
+        </div>
+
+        <div class="sidebar-user-info">
+            <ul class="sidebar-user-info-list">
+                <li class="sidebar-user-info-item">
+                    <div class="dropdown">
+                        <button onclick="toggleDropdown(this)" class="dropbtn" data-id="language">
+                            English
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+
+                        <ul class="dropdown-content" data-id="language">
+                            <li><a href="#">French</a></li>
+                            <li><a href="#">Italian</a></li>
+                            <li><a href="#">Spanish</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="sidebar-user-info-item">
+                    <div class="dropdown">
+                        <button onclick="toggleDropdown(this)" class="dropbtn" data-id="currency">
+                            USD
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+
+                        <ul class="dropdown-content" data-id="currency">
+                            <li><a href="#">GBP</a></li>
+                            <li><a href="#">ISO</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="sidebar-user-info-item">
+                    <i class="bi bi-people"></i>
+                </li>
+                <li class="sidebar-user-info-item">
+                    <i class="bi bi-heart"></i>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="sidebar-menu-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
+            <li><a href="/faq">FAQ</a></li>
+        </ul>
+    </div>
+
     <!-- Header -->
     <header id="main-header">
         <!-- Phần header ban đầu -->
@@ -26,7 +146,8 @@
                     </div>
                     <div class="header-top-right">
                         <div class="dropdown">
-                            <button onclick="toggleDropdown(this)" class="dropbtn" data-id="currency">USD
+                            <button onclick="toggleDropdown(this)" class="dropbtn" data-id="currency">
+                                USD
                                 <i class="bi bi-chevron-down"></i>
                             </button>
                             <div class="dropdown-content" data-id="currency">
@@ -36,7 +157,8 @@
                         </div>
 
                         <div class="dropdown">
-                            <button onclick="toggleDropdown(this)" class="dropbtn" data-id="language">English
+                            <button onclick="toggleDropdown(this)" class="dropbtn" data-id="language">
+                                English
                                 <i class="bi bi-chevron-down"></i>
                             </button>
                             <div class="dropdown-content" data-id="language">
@@ -58,16 +180,32 @@
                     </div>
                     <div class="logo">
                         <a href="index.html">
-                            <img src="/assets/images/logo.png" alt="">
+                            <img src="/assets/images/logo.png" alt="" />
                         </a>
                     </div>
                     <div class="header-icon">
-                        <i class="bi bi-search"></i>
-                        <i class="bi bi-people"></i>
-                        <i class="bi bi-heart"></i>
+                        <!-- Trigger/Open The Modal -->
+                        <button class="searchBtn">
+                            <i class="bi bi-search"></i>
+                        </button>
+
+                        <div class="dropdown">
+                            <button onclick="toggleDropdown(this)" class="dropbtn" data-id="people">
+                                <i class="bi bi-people"></i>
+                            </button>
+                            <div class="dropdown-content" data-id="people">
+                                <a href="my-account.html">My Account</a>
+                                <a href="login-register.html">Login & Register</a>
+                            </div>
+                        </div>
+                        <a href="wishlist.html">
+                            <i class="bi bi-heart"></i>
+                        </a>
                         <div class="shopping-cart">
-                            <i class="bi bi-cart"></i>
-                            <span class="cart-count"></span>
+                            <a onclick="openOffCanvasCart()">
+                                <i class="bi bi-bag"></i>
+                                <span class="cart-count"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -92,7 +230,7 @@
             <div class="content">
                 <div class="header-sticky-left">
                     <a href="index.html">
-                        <img src="/assets/images/logo.png" alt="">
+                        <img src="/assets/images/logo.png" alt="" />
                     </a>
                 </div>
                 <div class="header-sticky-center">
@@ -107,12 +245,28 @@
                     </nav>
                 </div>
                 <div class="header-icon">
-                    <i class="bi bi-search"></i>
-                    <i class="bi bi-people"></i>
-                    <i class="bi bi-heart"></i>
+                    <!-- Trigger/Open The Modal -->
+                    <button class="searchBtn">
+                        <i class="bi bi-search"></i>
+                    </button>
+
+                    <div class="dropdown">
+                        <button onclick="toggleDropdown(this)" class="dropbtn" data-id="people">
+                            <i class="bi bi-people"></i>
+                        </button>
+                        <div class="dropdown-content" data-id="people">
+                            <a href="my-account.html">My Account</a>
+                            <a href="login-register.html">Login & Register</a>
+                        </div>
+                    </div>
+                    <a href="wishlist.html">
+                        <i class="bi bi-heart"></i>
+                    </a>
                     <div class="shopping-cart">
-                        <i class="bi bi-cart"></i>
-                        <span class="cart-count"></span>
+                        <a onclick="openOffCanvasCart()">
+                            <i class="bi bi-bag"></i>
+                            <span class="cart-count"></span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -160,23 +314,24 @@
                 </div>
                 <form action="#" id="contact-form" class="contact-form">
                     <div class="group-input">
-                        <div class="form-field mb-35">
+                        <div class="form-field">
                             <input type="text" name="contact_fistName" placeholder="First Name" class="input-field">
                         </div>
-                        <div class="form-field mb-35">
+                        <div class="form-field">
                             <input type="text" name="contact_lastName" placeholder="Last Name" class="input-field">
                         </div>
                     </div>
-                    <div class="group-input mb-35">
-                        <div class="form-field mb-35">
+                    <div class="group-input">
+                        <div class="form-field">
                             <input type="text" name="contact_phone" placeholder="Phone" class="input-field">
                         </div>
-                        <div class="form-field mb-35">
+                        <div class="form-field">
                             <input type="text" name="contact_email" placeholder="Email" class="input-field">
                         </div>
                     </div>
                     <div class="form-field mb-48">
-                        <textarea name="contact_message" class="textarea-field" placeholder="Message" rows="3"></textarea>
+                        <textarea name="contact_message" class="textarea-field" placeholder="Message"
+                            rows="3"></textarea>
                     </div>
                     <div class="contact-button-wrap">
                         <button type="submit" class="btn btn-primary btn-custom-size">
@@ -185,6 +340,16 @@
                     </div>
                 </form>
             </div>
+        </div>
+    </section>
+
+    <!-- Map area -->
+    <section class="map-area">
+        <div class="content">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245374.1268612355!2d107.91381876689947!3d16.06700850271806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219c792252a13%3A0x1df0cb4b86727e06!2zxJDDoCBO4bq1bmcsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1744988075903!5m2!1svi!2s"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 

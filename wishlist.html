@@ -1,271 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/assets/images/logo.png" />
-    <title>Pronia - Plant Shop</title>
-    <link rel="stylesheet" href="/css/base.css" />
-    <link rel="stylesheet" href="/css/wishlist.css" />
-    <link rel="stylesheet" href="/css/base.responsive.css" />
-    <link rel="stylesheet" href="/css/wishlist.responsive.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-    />
-  </head>
 
-  <body>
-    <!-- Header -->
-    <header id="main-header">
-      <!-- Phần header ban đầu -->
-      <div class="header-main">
-        <div class="header-top">
-          <div class="content">
-            <div class="header-top-left">
-              <p>hello everyone! 25% off all products</p>
-            </div>
-            <div class="header-top-right">
-              <div class="dropdown">
-                <button
-                  onclick="toggleDropdown(this)"
-                  class="dropbtn"
-                  data-id="currency"
-                >
-                  USD
-                  <i class="bi bi-chevron-down"></i>
-                </button>
-                <div class="dropdown-content" data-id="currency">
-                  <a href="#">GBP</a>
-                  <a href="#">ISO</a>
-                </div>
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/assets/images/logo.png" />
+  <title>Pronia - Plant Shop</title>
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/wishlist.css" />
+  <link rel="stylesheet" href="/css/base.responsive.css" />
+  <link rel="stylesheet" href="/css/wishlist.responsive.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+</head>
 
-              <div class="dropdown">
-                <button
-                  onclick="toggleDropdown(this)"
-                  class="dropbtn"
-                  data-id="language"
-                >
-                  English
-                  <i class="bi bi-chevron-down"></i>
-                </button>
-                <div class="dropdown-content" data-id="language">
-                  <a href="#">French</a>
-                  <a href="#">Italian</a>
-                  <a href="#">Spanish</a>
-                </div>
-              </div>
-            </div>
+<body>
+  <!-- Offcanvas cart -->
+  <div id="offcanvas-overlay" class="offcanvas-overlay"></div>
+  <div id="offcanvas-cart" class="offcanvas-cart">
+    <div class="offcanvas-cart-header">
+      <h4 class="title">Shopping Cart</h4>
+      <a class="closebtn" onclick="closeOffCanvasCart()">&times;</a>
+    </div>
+
+    <div class="offcanvas-cart-content">
+      <div class="offcanvas-cart-item-list" id="offcanvas-cart-item-list"></div>
+
+      <div class="offcanvas-cart-summary">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">0.00</span>
+      </div>
+
+      <div class="offcanvas-cart-actions">
+        <button class="offcanvas-btn">
+          <a href="cart.html">View Cart</a>
+        </button>
+
+        <button class="offcanvas-btn" id="checkout-btn">
+          <a href="checkout.html">Checkout</a>
+        </button>
+      </div>
+
+    </div>
+  </div>
+  <!-- Offcanvas cart -->
+
+  <div id="toast-container"></div>
+
+  <!-- The Modal -->
+  <div id="searchModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <span class="searchbox-info">Start typing and press Enter to search</span>
+        <form action="#" class="hm-searchbox">
+          <input type="text" name="search-modal" id="search-modal" placeholder="Search" />
+          <button class="search-btn" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkbox toggle -->
+  <input type="checkbox" id="check" />
+
+  <!-- Nút mở sidebar cho điện thoại -->
+  <label for="check" class="checkbtn">
+    <i class="bi bi-list"></i>
+  </label>
+
+  <!-- Sidebar menu -->
+  <div class="sidebar-menu">
+    <!-- Nút đóng -->
+    <label for="check" class="close-btn">
+      <i class="bi bi-x"></i>
+    </label>
+
+    <div class="sidebar-menu-contact">
+      <div class="contact-icon">
+        <i class="bi bi-telephone"></i>
+      </div>
+      <p>+00 123 456 789</p>
+    </div>
+
+    <div class="sidebar-user-info">
+      <ul class="sidebar-user-info-list">
+        <li class="sidebar-user-info-item">
+          <div class="dropdown">
+            <button onclick="toggleDropdown(this)" class="dropbtn" data-id="language">
+              English
+              <i class="bi bi-chevron-down"></i>
+            </button>
+
+            <ul class="dropdown-content" data-id="language">
+              <li><a href="#">French</a></li>
+              <li><a href="#">Italian</a></li>
+              <li><a href="#">Spanish</a></li>
+            </ul>
           </div>
-        </div>
-        <div class="header-middle">
-          <div class="content">
-            <div class="header-middle-left">
-              <div class="contact-icon">
-                <i class="bi bi-telephone"></i>
-              </div>
-              <p>+00 123 456 789</p>
-            </div>
-            <div class="logo">
-              <a href="index.html">
-                <img src="/assets/images/logo.png" alt="" />
-              </a>
-            </div>
-            <div class="header-icon">
-              <i class="bi bi-search"></i>
-              <i class="bi bi-people"></i>
-              <i class="bi bi-heart"></i>
-              <div class="shopping-cart">
-                <i class="bi bi-cart"></i>
-                <span class="cart-count"></span>
-              </div>
-            </div>
+        </li>
+        <li class="sidebar-user-info-item">
+          <div class="dropdown">
+            <button onclick="toggleDropdown(this)" class="dropbtn" data-id="currency">
+              USD
+              <i class="bi bi-chevron-down"></i>
+            </button>
+
+            <ul class="dropdown-content" data-id="currency">
+              <li><a href="#">GBP</a></li>
+              <li><a href="#">ISO</a></li>
+            </ul>
           </div>
-        </div>
-        <div class="header-bottom">
-          <div class="content">
-            <nav class="navbar">
-              <ul class="navbar-list">
-                <li><a href="/">Home</a></li>
-                <li><a href="/shop.html">Shop</a></li>
-                <li><a href="/about.html">About Us</a></li>
-                <li><a href="/contact-us.html">Contact Us</a></li>
-                <li><a href="/faq.html">FAQ</a></li>
-              </ul>
-            </nav>
+        </li>
+        <li class="sidebar-user-info-item">
+          <i class="bi bi-people"></i>
+        </li>
+        <li class="sidebar-user-info-item">
+          <i class="bi bi-heart"></i>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="sidebar-menu-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/shop">Shop</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/contact-us">Contact Us</a></li>
+      <li><a href="/faq">FAQ</a></li>
+    </ul>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header">
+    <!-- Phần header ban đầu -->
+    <div class="header-main">
+      <div class="header-top">
+        <div class="content">
+          <div class="header-top-left">
+            <p>hello everyone! 25% off all products</p>
+          </div>
+          <div class="header-top-right">
+            <div class="dropdown">
+              <button onclick="toggleDropdown(this)" class="dropbtn" data-id="currency">
+                USD
+                <i class="bi bi-chevron-down"></i>
+              </button>
+              <div class="dropdown-content" data-id="currency">
+                <a href="#">GBP</a>
+                <a href="#">ISO</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button onclick="toggleDropdown(this)" class="dropbtn" data-id="language">
+                English
+                <i class="bi bi-chevron-down"></i>
+              </button>
+              <div class="dropdown-content" data-id="language">
+                <a href="#">French</a>
+                <a href="#">Italian</a>
+                <a href="#">Spanish</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Header sticky -->
-      <div class="header-sticky" id="sticky-header">
+      <div class="header-middle">
         <div class="content">
-          <div class="header-sticky-left">
+          <div class="header-middle-left">
+            <div class="contact-icon">
+              <i class="bi bi-telephone"></i>
+            </div>
+            <p>+00 123 456 789</p>
+          </div>
+          <div class="logo">
             <a href="index.html">
               <img src="/assets/images/logo.png" alt="" />
             </a>
           </div>
-          <div class="header-sticky-center">
-            <nav class="navbar">
-              <ul class="navbar-list">
-                <li><a href="/">Home</a></li>
-                <li><a href="/shop.html">Shop</a></li>
-                <li><a href="/about.html">About Us</a></li>
-                <li><a href="/contact-us.html">Contact Us</a></li>
-                <li><a href="/faq.html">FAQ</a></li>
-              </ul>
-            </nav>
-          </div>
           <div class="header-icon">
-            <i class="bi bi-search"></i>
-            <i class="bi bi-people"></i>
-            <i class="bi bi-heart"></i>
+            <!-- Trigger/Open The Modal -->
+            <button class="searchBtn">
+              <i class="bi bi-search"></i>
+            </button>
+
+            <div class="dropdown">
+              <button onclick="toggleDropdown(this)" class="dropbtn" data-id="people">
+                <i class="bi bi-people"></i>
+              </button>
+              <div class="dropdown-content" data-id="people">
+                <a href="my-account.html">My Account</a>
+                <a href="login-register.html">Login & Register</a>
+              </div>
+            </div>
+            <a href="wishlist.html">
+              <i class="bi bi-heart"></i>
+            </a>
             <div class="shopping-cart">
-              <i class="bi bi-cart"></i>
+              <a onclick="openOffCanvasCart()">
+                <i class="bi bi-bag"></i>
+                <span class="cart-count"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="content">
+          <nav class="navbar">
+            <ul class="navbar-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/shop.html">Shop</a></li>
+              <li><a href="/about.html">About Us</a></li>
+              <li><a href="/contact-us.html">Contact Us</a></li>
+              <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header sticky -->
+    <div class="header-sticky" id="sticky-header">
+      <div class="content">
+        <div class="header-sticky-left">
+          <a href="index.html">
+            <img src="/assets/images/logo.png" alt="" />
+          </a>
+        </div>
+        <div class="header-sticky-center">
+          <nav class="navbar">
+            <ul class="navbar-list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/shop.html">Shop</a></li>
+              <li><a href="/about.html">About Us</a></li>
+              <li><a href="/contact-us.html">Contact Us</a></li>
+              <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-icon">
+          <!-- Trigger/Open The Modal -->
+          <button class="searchBtn">
+            <i class="bi bi-search"></i>
+          </button>
+
+          <div class="dropdown">
+            <button onclick="toggleDropdown(this)" class="dropbtn" data-id="people">
+              <i class="bi bi-people"></i>
+            </button>
+            <div class="dropdown-content" data-id="people">
+              <a href="my-account.html">My Account</a>
+              <a href="login-register.html">Login & Register</a>
+            </div>
+          </div>
+          <a href="wishlist.html">
+            <i class="bi bi-heart"></i>
+          </a>
+          <div class="shopping-cart">
+            <a onclick="openOffCanvasCart()">
+              <i class="bi bi-bag"></i>
               <span class="cart-count"></span>
-            </div>
+            </a>
           </div>
         </div>
       </div>
-    </header>
-    <!-- Header -->
+    </div>
+  </header>
+  <!-- Header -->
 
-    <!-- Breadcrumb area -->
-    <section class="breadcrumb-area">
-      <div class="content">
-        <div class="breadcrumb-item">
-          <h2 class="breadcrumb-heading">Wishlist</h2>
-          <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li>Wishlist</li>
-          </ul>
-        </div>
+  <!-- Breadcrumb area -->
+  <section class="breadcrumb-area">
+    <div class="content">
+      <div class="breadcrumb-item">
+        <h2 class="breadcrumb-heading">Wishlist</h2>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li>Wishlist</li>
+        </ul>
       </div>
-    </section>
-    <!-- Breadcrumb area -->
+    </div>
+  </section>
+  <!-- Breadcrumb area -->
 
-    <!-- Wishlist -->
-    <section class="wishlist-area">
-      <div class="content">
-        <div class="row">
-          <div class="col-12">
-            <div class="wishlist-table">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Remove</th>
-                    <th>Images</th>
-                    <th>Products</th>
-                    <th>Stock Status</th>
-                    <th>Add To Cart</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <!-- Will be filled dynamically -->
-                </tbody>
-              </table>
-            </div>
+  <!-- Wishlist -->
+  <section class="wishlist-area">
+    <div class="content">
+      <div class="row">
+        <div class="col-12">
+          <div class="wishlist-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Remove</th>
+                  <th>Images</th>
+                  <th>Product</th>
+                  <th>Stock Status</th>
+                  <th>Add To Cart</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Will be filled dynamically -->
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Wishlist -->
+  <!-- Wishlist -->
 
-    <!-- Footer -->
-    <footer>
-      <div class="content">
-        <div class="row">
-          <div class="footer-col-3">
-            <div class="footer-widget-item">
-              <div class="footer-widget-logo">
-                <img src="/assets/images/logo.png" alt="logo" />
-              </div>
-              <div class="footer-widget-desc">
-                <p>
-                  Lorem ipsum dolor sit amet, consec adipisl elit, sed do
-                  eiusmod tempor incidio ut labore et dolore magna.
-                </p>
-              </div>
-              <div class="footer-widget-social">
+  <!-- Footer -->
+  <footer>
+    <div class="content">
+      <div class="row">
+        <div class="footer-col-3">
+          <div class="footer-widget-item">
+            <div class="footer-widget-logo">
+              <img src="/assets/images/logo.png" alt="logo" />
+            </div>
+            <div class="footer-widget-desc">
+              <p>
+                Lorem ipsum dolor sit amet, consec adipisl elit, sed do
+                eiusmod tempor incidio ut labore et dolore magna.
+              </p>
+            </div>
+            <div class="footer-widget-social">
+              <ul>
+                <li>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col-2 padding-top-40-right-left-12">
+          <div class="footer-widget-item">
+            <h3 class="footer-widget-title">Userful Links</h3>
+            <ul class="footer-widget-list-item">
+              <li><a href="#">About Pronia</a></li>
+              <li><a href="#">How to shop</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Log in</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-col-2 padding-top-40-right-left-12">
+          <div class="footer-widget-item">
+            <h3 class="footer-widget-title">My Account</h3>
+            <ul class="footer-widget-list-item">
+              <li><a href="#">Sign In</a></li>
+              <li><a href="#">View Cart</a></li>
+              <li><a href="#">My Wishlist</a></li>
+              <li><a href="#">Track My Order</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-col-2 padding-top-40-right-left-12">
+          <div class="footer-widget-item">
+            <h3 class="footer-widget-title">Our Services</h3>
+            <ul class="footer-widget-list-item">
+              <li><a href="#">Payment Methods</a></li>
+              <li><a href="#">Money Guarantee</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-col-3 padding-top-40-right-left-12">
+          <div class="footer-widget-item">
+            <div class="footer-contact-info">
+              <h3 class="footer-widget-title">Got Question? Call Us</h3>
+              <a href="#" class="number">123 456 789</a>
+              <div class="address">
                 <ul>
-                  <li>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="bi bi-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                  </li>
+                  <li>Your Address Goes Here</li>
                 </ul>
               </div>
             </div>
-          </div>
-          <div class="footer-col-2 padding-top-40-right-left-12">
-            <div class="footer-widget-item">
-              <h3 class="footer-widget-title">Userful Links</h3>
-              <ul class="footer-widget-list-item">
-                <li><a href="#">About Pronia</a></li>
-                <li><a href="#">How to shop</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">Log in</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-col-2 padding-top-40-right-left-12">
-            <div class="footer-widget-item">
-              <h3 class="footer-widget-title">My Account</h3>
-              <ul class="footer-widget-list-item">
-                <li><a href="#">Sign In</a></li>
-                <li><a href="#">View Cart</a></li>
-                <li><a href="#">My Wishlist</a></li>
-                <li><a href="#">Track My Order</a></li>
-                <li><a href="#">Help</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-col-2 padding-top-40-right-left-12">
-            <div class="footer-widget-item">
-              <h3 class="footer-widget-title">Our Services</h3>
-              <ul class="footer-widget-list-item">
-                <li><a href="#">Payment Methods</a></li>
-                <li><a href="#">Money Guarantee</a></li>
-                <li><a href="#">Returns</a></li>
-                <li><a href="#">Shipping</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-col-3 padding-top-40-right-left-12">
-            <div class="footer-widget-item">
-              <div class="footer-contact-info">
-                <h3 class="footer-widget-title">Got Question? Call Us</h3>
-                <a href="#" class="number">123 456 789</a>
-                <div class="address">
-                  <ul>
-                    <li>Your Address Goes Here</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="payment-method">
-                <a href="#"
-                  ><img src="/assets/images/payment.png" alt="payment"
-                /></a>
-              </div>
+            <div class="payment-method">
+              <a href="#"><img src="/assets/images/payment.png" alt="payment" /></a>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-    <!-- Footer -->
+    </div>
+  </footer>
+  <!-- Footer -->
 
-    <script src="/js/base.js"></script>
-    <script src="/js/wishlist.js"></script>
-  </body>
+  <script src="/js/base.js"></script>
+  <script src="/js/wishlist.js"></script>
+</body>
+
 </html>

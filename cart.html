@@ -15,6 +15,36 @@
 
 <body>
 
+  <!-- Offcanvas cart -->
+  <div id="offcanvas-overlay" class="offcanvas-overlay"></div>
+  <div id="offcanvas-cart" class="offcanvas-cart">
+    <div class="offcanvas-cart-header">
+      <h4 class="title">Shopping Cart</h4>
+      <a class="closebtn" onclick="closeOffCanvasCart()">&times;</a>
+    </div>
+
+    <div class="offcanvas-cart-content">
+      <div class="offcanvas-cart-item-list" id="offcanvas-cart-item-list"></div>
+
+      <div class="offcanvas-cart-summary">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">0.00</span>
+      </div>
+
+      <div class="offcanvas-cart-actions">
+        <button class="offcanvas-btn">
+          <a href="cart.html">View Cart</a>
+        </button>
+
+        <button class="offcanvas-btn" id="checkout-btn">
+          <a href="checkout.html">Checkout</a>
+        </button>
+      </div>
+
+    </div>
+  </div>
+  <!-- Offcanvas cart -->
+
   <div id="toast-container"></div>
 
   <!-- The Modal -->
@@ -155,7 +185,7 @@
           </div>
           <div class="header-icon">
             <!-- Trigger/Open The Modal -->
-            <button id="searchBtn">
+            <button class="searchBtn">
               <i class="bi bi-search"></i>
             </button>
 
@@ -172,8 +202,8 @@
               <i class="bi bi-heart"></i>
             </a>
             <div class="shopping-cart">
-              <a href="cart.html">
-                <i class="bi bi-cart"></i>
+              <a onclick="openOffCanvasCart()">
+                <i class="bi bi-bag"></i>
                 <span class="cart-count"></span>
               </a>
             </div>
@@ -215,12 +245,28 @@
           </nav>
         </div>
         <div class="header-icon">
-          <i class="bi bi-search"></i>
-          <i class="bi bi-people"></i>
-          <i class="bi bi-heart"></i>
+          <!-- Trigger/Open The Modal -->
+          <button class="searchBtn">
+            <i class="bi bi-search"></i>
+          </button>
+
+          <div class="dropdown">
+            <button onclick="toggleDropdown(this)" class="dropbtn" data-id="people">
+              <i class="bi bi-people"></i>
+            </button>
+            <div class="dropdown-content" data-id="people">
+              <a href="my-account.html">My Account</a>
+              <a href="login-register.html">Login & Register</a>
+            </div>
+          </div>
+          <a href="wishlist.html">
+            <i class="bi bi-heart"></i>
+          </a>
           <div class="shopping-cart">
-            <i class="bi bi-cart"></i>
-            <span class="cart-count"></span>
+            <a onclick="openOffCanvasCart()">
+              <i class="bi bi-bag"></i>
+              <span class="cart-count"></span>
+            </a>
           </div>
         </div>
       </div>
@@ -247,25 +293,48 @@
   <section class="cart-area">
     <div class="content">
 
-      <!-- Giỏ hàng -->
-      <table class="cart-table">
-        <tbody class="cart-table-body"></tbody>
-      </table>
+      <div class="row">
+        <div class="col-12">
+          <div class="cart-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Remove</th>
+                  <th>Images</th>
+                  <th>Product</th>
+                  <th>Unit Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody class="cart-table-body">
+                <!-- Will be filled dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
 
       <!-- Nút cập nhật -->
-      <button id="updateCartBtn">Update Cart</button>
+      <div class="cart-update">
+        <button class="continue-shopping"><a href="/shop.html">Continue Shopping</a></button>
+        <button id="updateCartBtn">Update Cart</button>
+      </div>
+
 
       <!-- Nút thanh toán -->
       <div class="cart-checkout">
-        <div class="cart-checkout-left">
-          <a href="/shop.html" class="continue-shopping">Continue Shopping</a>
-        </div>
-        <div class="cart-checkout-right">
-          <button id="checkoutBtn">
-           <a href="/checkout.html">Proceed to Checkout</a>  
+        <h2>Cart totals</h2>
+
+        <div class="cart-total" id="cart-total"></div>
+
+        <div class="checkout-button">
+          <button>
+            <a href="/checkout.html">Proceed to Checkout</a>
           </button>
         </div>
       </div>
+    </div>
   </section>
   <!-- Cart area -->
 

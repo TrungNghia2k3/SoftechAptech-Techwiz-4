@@ -1,25 +1,27 @@
 // XỬ LÝ MODAL SEARCH
 const modal = document.getElementById("searchModal");
-const btn = document.getElementById("searchBtn");
+const buttons = document.getElementsByClassName("searchBtn");
 const span = document.getElementsByClassName("close")[0];
 
-// Mở modal và khóa scroll
-btn.onclick = function () {
-  modal.style.display = "block";
-  document.body.classList.add("modal-open"); // Ngăn scroll
-};
+// Gán sự kiện mở modal cho tất cả nút searchBtn
+Array.from(buttons).forEach((btn) => {
+  btn.addEventListener("click", () => {
+    modal.style.display = "block";
+    document.body.classList.add("modal-open");
+  });
+});
 
-// Đóng modal và mở lại scroll
+// Gán sự kiện đóng modal
 span.onclick = function () {
   modal.style.display = "none";
-  document.body.classList.remove("modal-open"); // Cho scroll lại
+  document.body.classList.remove("modal-open");
 };
 
-// Đóng modal nếu click ra ngoài
+// Đóng khi click ra ngoài modal
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
-    document.body.classList.remove("modal-open"); // Cho scroll lại
+    document.body.classList.remove("modal-open");
   }
 };
 
@@ -214,6 +216,7 @@ document.addEventListener("DOMContentLoaded", updateCartCount);
 function openOffCanvasCart() {
   document.getElementById("offcanvas-cart").style.width = "450px";
   document.getElementById("offcanvas-overlay").classList.add("show");
+  console.log("open offcanvas cart");
   renderOffCanvasCart(); // render giỏ hàng
 }
 
@@ -244,22 +247,24 @@ async function renderOffCanvasCart() {
 
       const html = `
           <div class="offcanvas-cart-item" data-id="${product.id}">
-            <img src="${product["image-primary"]}" alt="${
-        product.name
-      }" width="50">
-            <div class="info">
-              <h4>${product.name}</h4>
-              <p>Price: $${product.price.toFixed(2)}</p>
-              <p>Qty: ${item.quantity}</p>
+            <img 
+              src="${product["image-primary"]}" 
+              alt="${product.name}">
+            <div class="product-item-info">
+              <a class="product-name">${product.name}</a>
+              <p class="product-quantity-price">${
+                item.quantity
+              } x $${product.price.toFixed(2)}</p>
             </div>
             <button class="remove-btn" data-id="${product.id}">&times;</button>
           </div>
+          
         `;
       listContainer.innerHTML += html;
     }
   });
 
-  subtotalEl.textContent = subtotal.toFixed(2);
+  subtotalEl.textContent = `$` + subtotal.toFixed(2);
 
   // Gán lại sự kiện remove
   document.querySelectorAll(".remove-btn").forEach((btn) => {
@@ -271,3 +276,250 @@ async function renderOffCanvasCart() {
     });
   });
 }
+
+// FETCH DỮ LIỆU SẢN PHẨM
+async function fetchProducts() {
+  try {
+    const response = await fetch("data.json");
+    const data = await response.json();
+    return data.products;
+  } catch (error) {
+    console.error("Lỗi khi tải dữ liệu:", error);
+    return [];
+  }
+}
+
+const productModalWrapper = document.getElementById("product-modal-wrapper");
+const productModalBody = document.getElementById("product-modal-body");
+const closeProductModal = document.querySelector(".product-modal-close");
+
+// Lắng nghe click biểu tượng "eye"
+document.addEventListener("click", async function (e) {
+  const eyeBtn = e.target.closest(".bi-eye");
+
+  if (eyeBtn) {
+    e.preventDefault();
+
+    const itemAction = eyeBtn.closest(".item-action");
+    const productId = itemAction?.querySelector("a")?.dataset.id;
+
+    if (productId) {
+      const products = await fetchProducts(); // Hàm lấy danh sách sản phẩm
+      const product = products.find((p) => p.id === parseInt(productId));
+      renderProductModal(product);
+    }
+  }
+});
+
+// Hàm render nội dung sản phẩm trong modal
+function renderProductModal(product) {
+  if (!product) {
+    productModalBody.innerHTML = "<p>Product not found.</p>";
+    return;
+  }
+
+  const stars = Array.from(
+    { length: product.rating },
+    () => '<i class="bi bi-star-fill"></i>'
+  ).join("");
+
+  // Lấy wishlist hiện tại từ localStorage
+  const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+  // Kiểm tra xem sản phẩm có trong wishlist không
+  const isInWishlist = wishlist.includes(product.id);
+
+  productModalBody.innerHTML = `
+    <div class="product-detail-wrapper">
+      <div class="product-detail-image"> 
+          <img id="mainImage"
+            src="${product["image-primary"]}" 
+            alt="${product.name}">
+
+          <div class="product-detail-images-list">
+            <img class="thumb-image" 
+                src="${product["image-primary"]}" 
+                alt="${product.name}">
+            <img class="thumb-image" 
+                src="${product["image-secondary"]}" 
+                alt="${product.name}">
+          </div>
+      </div>
+
+      <div class="product-detail-content">
+        <h2 class="product-name">${product.name}</h2>
+        
+        <div class="price-box">
+          <span class="new-price">${product.price}</span>
+        </div>
+        
+        <div class="rating-box">
+          ${stars}
+        </div>
+
+        <div class="selector-wrap color-option">
+          <span class="selector-title border-bottom-0">Color</span>
+          <div class="select-wrapper">
+            <select class="nice-select border-bottom-0" id="color-select">
+              ${product.color
+                ?.map((color) => `<option value="${color}">${color}</option>`)
+                .join("")}
+            </select>
+            <i class="bi bi-chevron-down custom-icon"></i>
+          </div>
+        </div>
+        
+        <div class="selector-wrap size-option">
+          <span class="selector-title">Size</span>
+          <div class="select-wrapper">
+            <select class="nice-select" id="size-select">
+              ${product.size
+                ?.map((size) => `<option value="${size}">${size}</option>`)
+                .join("")}
+            </select>
+            <i class="bi bi-chevron-down custom-icon"></i>
+          </div>
+        </div>
+
+        <p class="description">${product.description}</p>
+        
+        <ul class="quantity-with-btn">
+          <li class="quantity">
+            <form class="cart-count-form" role="form" data-product-id="${
+              product.id
+            }">
+              <a class="minus"><i class="bi bi-dash"></i></a>
+              <input class="counter" type="number" name="count" value="1" min="1">
+              <a class="plus"><i class="bi bi-plus"></i></a>
+            </form>
+          </li>
+          <li class="add-to-cart-btn">
+            <button id="addToCartBtn">Add to Cart</button>
+          </li>
+          <li class="wishlist-btn-wrap">
+            <a class="wishlist-btn ${isInWishlist ? "active" : ""}" 
+            data-id="${product.id}">
+              <i class="bi bi-heart"></i>
+            </a>
+          </li>
+        </ul>
+
+        
+        <ul class="service-item-wrap">
+          <li class="service-item">
+            <div class="service-img">
+              <img src="assets/images/shipping-1.png" alt="Shipping-1">
+            </div>
+            <div class="service-content">
+              <span class="title">
+              Free <br> 
+              Shipping
+              </span>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-img">
+              <img src="assets/images/shipping-2.png" alt="Shipping-2">
+            </div>
+            <div class="service-content">
+              <span class="title">
+              Safe <br> 
+              Payment
+              </span>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-img">
+              <img src="assets/images/shipping-3.png" alt="Shipping-3">
+            </div>
+            <div class="service-content">
+              <span class="title">
+              Safe <br> 
+              Payment
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  `;
+
+  productModalWrapper.style.display = "flex";
+
+  // Thay đổi ảnh chính khi nhấp vào ảnh thu nhỏ
+  const mainImage = document.getElementById("mainImage");
+  const thumbnails = document.querySelectorAll(".thumb-image");
+
+  thumbnails.forEach((thumb) => {
+    thumb.addEventListener("click", () => {
+      mainImage.src = thumb.src;
+    });
+  });
+
+  document.querySelectorAll(".cart-count-form").forEach((form) => {
+    const input = form.querySelector(".counter");
+    const plus = form.querySelector(".plus");
+    const minus = form.querySelector(".minus");
+
+    plus.addEventListener("click", () => {
+      input.value = parseInt(input.value || "0", 10) + 1;
+    });
+
+    minus.addEventListener("click", () => {
+      const current = parseInt(input.value || "0", 10);
+      if (current > 1) input.value = current - 1;
+    });
+  });
+
+  // XỬ LÝ THÊM VÀO GIỎ HÀNG
+  document.getElementById("addToCartBtn").addEventListener("click", () => {
+    const form = document.querySelector(".cart-count-form");
+    const productId = parseInt(form.dataset.productId);
+    const quantity = parseInt(form.querySelector(".counter").value);
+
+    if (quantity > 0) {
+      addToCart(productId, quantity);
+    }
+  });
+
+  // XỬ LÝ THÊM / GỠ WISHLIST
+  document.addEventListener("click", function (e) {
+    const btn = e.target.closest(".wishlist-btn");
+
+    if (btn) {
+      e.preventDefault();
+      const productId = parseInt(btn.dataset.id);
+      toggleWishlist(productId, btn); // Sử dụng chính thẻ <a>
+    }
+  });
+
+  function toggleWishlist(id, element) {
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    const icon = element.querySelector("i");
+
+    const index = wishlist.indexOf(id);
+    if (index !== -1) {
+      // Remove
+      wishlist.splice(index, 1);
+      element.classList.remove("active");
+      showToast("bi bi-trash-fill", "Removed from wishlist");
+    } else {
+      // Add
+      wishlist.push(id);
+      element.classList.add("active");
+      showToast("bi bi-check-circle-fill", "Added to wishlist");
+    }
+
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+  }
+}
+
+// Đóng modal
+closeProductModal.onclick = () => {
+  productModalWrapper.style.display = "none";
+};
+
+window.onclick = (e) => {
+  if (e.target === productModalWrapper) {
+    productModalWrapper.style.display = "none";
+  }
+};

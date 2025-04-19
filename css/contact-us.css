@@ -16,6 +16,7 @@
   display: flex;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
+  width: 100%;
 }
 
 .contact-wrap .contact-info {
@@ -50,6 +51,7 @@
 .contact-list li:not(:last-child) {
   margin-bottom: 20px;
 }
+
 .contact-list li {
   display: flex;
   align-items: center;
@@ -75,35 +77,26 @@
 
 .contact-wrap .contact-form {
   padding: 50px 40px;
-  width: calc(100% - 370px);
-}
-
-.group-input {
-  display: flex;
-}
-
-.form-field {
   width: 100%;
-  margin-right: 30px;
 }
 
-.input-field,
-.textarea-field {
+.contact-form .input-field,
+.contact-form .textarea-field {
   border: 0;
   border-bottom: 1px solid #dee2e6;
   font-weight: 400;
   color: #8d8d8c;
   line-height: 45px;
+  width: 100%;
   font-style: italic;
-  outline: none;
 }
 
-.input-field {
-  width: 350px;
+.contact-form .input-field {
+  width: 400px;
   height: 45px;
 }
 
-.textarea-field {
+.contact-form .textarea-field {
   width: 100%;
 }
 
@@ -112,7 +105,7 @@
   justify-content: flex-end;
 }
 
-.btn-custom-size {
+.contact-button-wrap .btn-custom-size {
   width: 210px;
   height: 65px;
   line-height: 65px;
@@ -124,3 +117,25 @@
 }
 
 /* Contact Form */
+
+/* Map area */
+.map-area {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.map-area .content {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.map-area iframe {
+  width: 100%;
+  height: 500px;
+  /* Hoặc bạn có thể tăng chiều cao nếu cần */
+  border: none;
+  display: block;
+}
