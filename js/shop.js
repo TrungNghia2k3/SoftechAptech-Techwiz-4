@@ -313,7 +313,11 @@ function renderProducts(products) {
                       </li>
                     </div>
                     <div class="item-action">
-                      <li><a href="#"><i class="bi bi-eye"></i></a></li>
+                      <li>
+                        <a data-id="${p.id}">
+                          <i class="bi bi-eye"></i>
+                        </a>
+                      </li>
                     </div>
                     <div class="item-action">
                       <li>

@@ -1529,7 +1529,7 @@ footer .content .row {
   border: none;
 }
 
-.wishlist-btn-wrap .wishlist-btn {
+.wishlist-btn-wrap .add-to-wishlist {
   width: 100%;
   height: 100%;
   display: flex;
@@ -1542,13 +1542,13 @@ footer .content .row {
   border: none;
 }
 
-.wishlist-btn-wrap .wishlist-btn:hover {
+.wishlist-btn-wrap .add-to-wishlist:hover {
   background-color: var(--green);
   border-color: var(--green);
   color: #ffffff;
 }
 
-.wishlist-btn.active {
+.wishlist-btn-wrap .add-to-wishlist.active {
   background-color: var(--green);
   border-color: var(--green);
   color: #ffffff;

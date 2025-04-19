@@ -108,34 +108,35 @@ function updateCartCount() {
 
 function toggleWishlist(id, element) {
   let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-
   const index = wishlist.indexOf(id);
-  const icon = element.querySelector("i");
+
+  // Nếu nằm trong item-action, thêm class ở cha ngoài cùng
+  const parentItem = element.closest(".item-action") || element;
 
   if (index !== -1) {
-    // Đã tồn tại -> xoá
     wishlist.splice(index, 1);
-    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    parentItem.classList.remove("active");
     element.classList.remove("active");
     showToast("bi bi-trash-fill", "Removed from wishlist");
   } else {
-    // Chưa có -> thêm vào
     wishlist.push(id);
-    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    parentItem.classList.add("active");
     element.classList.add("active");
     showToast("bi bi-check-circle-fill", "Added to wishlist");
   }
+
+  localStorage.setItem("wishlist", JSON.stringify(wishlist));
 }
 
 // XỬ LÝ THÊM VÀO WISHLIST
 document.addEventListener("click", function (e) {
   const btn = e.target.closest(".add-to-wishlist");
-
   if (btn) {
     e.preventDefault();
     const productId = parseInt(btn.dataset.id);
-
-    toggleWishlist(productId, btn.closest(".item-action"));
+    if (!isNaN(productId)) {
+      toggleWishlist(productId, btn);
+    }
   }
 });
 
@@ -396,7 +397,7 @@ function renderProductModal(product) {
             <button id="addToCartBtn">Add to Cart</button>
           </li>
           <li class="wishlist-btn-wrap">
-            <a class="wishlist-btn ${isInWishlist ? "active" : ""}" 
+            <a class="add-to-wishlist ${isInWishlist ? "active" : ""}" 
             data-id="${product.id}">
               <i class="bi bi-heart"></i>
             </a>
@@ -480,37 +481,6 @@ function renderProductModal(product) {
       addToCart(productId, quantity);
     }
   });
-
-  // XỬ LÝ THÊM / GỠ WISHLIST
-  document.addEventListener("click", function (e) {
-    const btn = e.target.closest(".wishlist-btn");
-
-    if (btn) {
-      e.preventDefault();
-      const productId = parseInt(btn.dataset.id);
-      toggleWishlist(productId, btn); // Sử dụng chính thẻ <a>
-    }
-  });
-
-  function toggleWishlist(id, element) {
-    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-    const icon = element.querySelector("i");
-
-    const index = wishlist.indexOf(id);
-    if (index !== -1) {
-      // Remove
-      wishlist.splice(index, 1);
-      element.classList.remove("active");
-      showToast("bi bi-trash-fill", "Removed from wishlist");
-    } else {
-      // Add
-      wishlist.push(id);
-      element.classList.add("active");
-      showToast("bi bi-check-circle-fill", "Added to wishlist");
-    }
-
-    localStorage.setItem("wishlist", JSON.stringify(wishlist));
-  }
 }
 
 // Đóng modal

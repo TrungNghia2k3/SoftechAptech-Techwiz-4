@@ -95,8 +95,7 @@ function renderProductDetail(product) {
             <button id="addToCartBtn">Add to Cart</button>
           </li>
           <li class="wishlist-btn-wrap">
-            <a class="wishlist-btn ${isInWishlist ? "active" : ""}" 
-            data-id="${product.id}">
+            <a class="add-to-wishlist ${isInWishlist ? "active" : ""}" data-id="${product.id}">
               <i class="bi bi-heart"></i>
             </a>
           </li>
@@ -204,37 +203,6 @@ function renderProductDetail(product) {
       addToCart(productId, quantity);
     }
   });
-
-  // XỬ LÝ THÊM / GỠ WISHLIST
-  document.addEventListener("click", function (e) {
-    const btn = e.target.closest(".wishlist-btn");
-
-    if (btn) {
-      e.preventDefault();
-      const productId = parseInt(btn.dataset.id);
-      toggleWishlist(productId, btn); // Sử dụng chính thẻ <a>
-    }
-  });
-
-  function toggleWishlist(id, element) {
-    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-    const icon = element.querySelector("i");
-
-    const index = wishlist.indexOf(id);
-    if (index !== -1) {
-      // Remove
-      wishlist.splice(index, 1);
-      element.classList.remove("active");
-      showToast("bi bi-trash-fill", "Removed from wishlist");
-    } else {
-      // Add
-      wishlist.push(id);
-      element.classList.add("active");
-      showToast("bi bi-check-circle-fill", "Added to wishlist");
-    }
-
-    localStorage.setItem("wishlist", JSON.stringify(wishlist));
-  }
 }
 
 fetchData().then((products) => {
@@ -314,7 +282,11 @@ async function renderRelatedProducts() {
                       </li>
                     </div>
                     <div class="item-action">
-                      <li><a href="#"><i class="bi bi-eye"></i></a></li>
+                      <li>
+                        <a data-id="${product.id}">
+                          <i class="bi bi-eye"></i>
+                        </a>
+                      </li>
                     </div>
                     <div class="item-action">
                       <li>

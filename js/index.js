@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                   <ul>
                     <div class="item-action ${isInWishlist ? "active" : ""}">
                       <li>
-                        <a class="add-to-wishlist" data-id="${product.id}">
+                        <a class="add-to-wishlist" data-wishlist data-id="${product.id}">
                           <i class="bi bi-heart"></i>
                         </a>
                       </li>
@@ -190,7 +190,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                       </li>
                     </div>
                     <div class="item-action">
-                      <li><a href="#"><i class="bi bi-eye"></i></a></li>
+                      <li>
+                        <a data-id="${product.id}">
+                          <i class="bi bi-eye"></i>
+                        </a>
+                      </li>
                     </div>
                     <div class="item-action">
                       <li>
