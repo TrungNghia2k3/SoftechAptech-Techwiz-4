@@ -159,10 +159,7 @@ Giả sử tổng hiệu ứng trên 1 slide là 3 giây, bạn có thể đặt
   background: var(--green);
   color: white;
 }
-
 /* Carousel */
-
-
 
 /* Product area section */
 .product-area {
@@ -238,11 +235,8 @@ Giả sử tổng hiệu ứng trên 1 slide là 3 giây, bạn có thể đặt
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
-  /* 3 cột bằng nhau */
   grid-template-rows: auto auto;
-  /* 2 hàng */
   gap: 30px;
-  /* Khoảng cách giữa các phần */
 }
 
 .content .banner-item {
@@ -262,7 +256,6 @@ Giả sử tổng hiệu ứng trên 1 slide là 3 giây, bạn có thể đặt
   position: absolute;
   background: rgba(255, 255, 255, 0.2);
   opacity: 0;
-  /* Ẩn ban đầu */
 }
 
 /* Hiệu ứng ngang (tỏa từ giữa ra hai bên) */
@@ -480,22 +473,18 @@ Giả sử tổng hiệu ứng trên 1 slide là 3 giây, bạn có thể đặt
 /* Cấu trúc Grid */
 .banner-one {
   grid-column: span 2;
-  /* Chiếm 2 cột */
 }
 
 .banner-two {
   grid-column: span 1;
-  /* Chiếm 1 cột */
 }
 
 .banner-three {
   grid-column: span 1;
-  /* Chiếm 1 cột */
 }
 
 .banner-four {
   grid-column: span 2;
-  /* Chiếm 2 cột */
 }
 
 .banner-content {
@@ -597,12 +586,8 @@ Giả sử tổng hiệu ứng trên 1 slide là 3 giây, bạn có thể đặt
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  /* Căn giữa theo chiều dọc */
   align-items: center;
-  /* Căn giữa theo chiều ngang */
   text-align: center;
-  /* Thêm chiều cao */
 }
 
 .testimonial-area .content {
@@ -689,7 +674,6 @@ Giả sử tổng hiệu ứng trên 1 slide là 3 giây, bạn có thể đặt
   margin-bottom: 16px;
   text-align: justify;
 }
-
 /* Testimonial area */
 
 /* Blog area */

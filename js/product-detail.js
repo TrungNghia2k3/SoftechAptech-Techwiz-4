@@ -241,7 +241,7 @@ async function renderRelatedProducts() {
   // 🔹 Lọc sản phẩm cùng category, khác id hiện tại
   const relatedProducts = products
     .filter((p) => p.category === currentProduct.category && p.id !== productId)
-    .slice(0, 4); // ✅ Giới hạn 4 sản phẩm
+    .slice(0, 4); // Giới hạn 4 sản phẩm
 
   const container = document.getElementById("product-category");
 

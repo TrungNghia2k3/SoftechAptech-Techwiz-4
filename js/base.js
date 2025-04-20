@@ -25,8 +25,8 @@ window.onclick = function (event) {
   }
 };
 
-// XỬ LÝ HEADER DÍNH
-// Khi cuộn xuống qua header, hiển thị header dính
+// XỬ LÝ HEADER STICKY
+// Khi cuộn xuống qua header, hiển thị header sticky
 const header = document.getElementById("main-header");
 const stickyHeader = document.getElementById("sticky-header");
 

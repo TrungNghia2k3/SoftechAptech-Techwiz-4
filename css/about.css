@@ -35,7 +35,6 @@
     line-height: 31px;
     margin-bottom: 30px;
 }
-
 /* About content section */
 
 /* Video introduction section */
@@ -120,7 +119,6 @@
     color: white;
     cursor: pointer;
 }
-
 /* Video introduction section */
 
 /* Team section */
@@ -252,7 +250,6 @@
     content: attr(data-tooltip);
     position: absolute;
     bottom: 120%;
-    /* nằm phía trên icon */
     left: 50%;
     transform: translateX(-50%);
     background-color: #333;
@@ -301,5 +298,4 @@
     opacity: 1;
     font-weight: 500;
 }
-
 /* Team section */

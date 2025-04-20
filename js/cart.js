@@ -3,13 +3,6 @@ function getCart() {
   return JSON.parse(localStorage.getItem("cart")) || [];
 }
 
-// Lấy dữ liệu từ file data.json (giả sử chứa danh sách sản phẩm)
-async function fetchProducts() {
-  const res = await fetch("data.json");
-  const data = await res.json();
-  return data.products;
-}
-
 // Render danh sách giỏ hàng
 async function renderCart() {
   const cart = getCart();

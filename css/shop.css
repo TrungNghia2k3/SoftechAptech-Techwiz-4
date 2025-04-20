@@ -27,11 +27,9 @@
     max-width: 75%;
     padding: 0px 8px;
 }
-
 /* Shop area */
 
 /* Sidebar */
-
 /* Widget General */
 .widget-item {
     padding-top: 50px;
@@ -256,11 +254,9 @@ input[type="number"]::-webkit-inner-spin-button {
     pointer-events: auto;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
-
 /* Sidebar */
 
 /* Col-9 */
-
 /* Product Top Bar */
 .col-9 .product-topbar {
     display: flex;
@@ -440,7 +436,6 @@ input[type="number"]::-webkit-inner-spin-button {
 /* Loại bỏ hiệu ứng hover cũ trên a */
 .item-action-list .item-action a {
     color: inherit;
-    /* Kế thừa màu từ .item-action */
     text-decoration: none;
 }
 
@@ -480,7 +475,5 @@ input[type="number"]::-webkit-inner-spin-button {
     opacity: 0.5;
     cursor: default;
 }
-
 /* Pagination */
-
 /* Col-9 */

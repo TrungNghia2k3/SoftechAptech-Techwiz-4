@@ -37,7 +37,6 @@
 .border-bottom-0 {
   border-bottom: 0 !important;
 }
-
 /* General */
 
 /* Sidebar menu */
@@ -52,7 +51,6 @@
 .sidebar-menu {
   display: none;
 }
-
 /* Sidebar menu */
 
 /* Toast */
@@ -102,29 +100,20 @@
     transform: translateX(0);
   }
 }
-
 /* Toast */
 
 /* The Modal */
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1000;
-  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.6);
-  /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -214,7 +203,6 @@
 .modal-open {
   overflow: hidden;
 }
-
 /* The Modal */
 
 /* Product modal */
@@ -255,7 +243,6 @@
 .product-modal-body {
   padding: 32px;
 }
-
 /* Product modal */
 
 /* Form element */
@@ -392,7 +379,6 @@
 .cart-count-form .plus:hover {
   background-color: #505050;
   border-radius: 0;
-  /* giữ vuông */
 }
 
 .cart-count-form .counter {
@@ -411,9 +397,7 @@
 .cart-count-form input[type="number"]::-webkit-inner-spin-button {
   display: none;
 }
-
 /* Cart count form */
-
 /* Form element */
 
 /* Header */
@@ -664,7 +648,6 @@ header {
   z-index: 999;
   display: none;
   animation: slideDown 0.3s ease forwards;
-  /* Ẩn ban đầu */
 }
 
 /* Keyframe cho hiệu ứng trượt xuống */
@@ -694,11 +677,9 @@ header {
   justify-content: center;
   list-style: none;
 }
-
 /* Header */
 
 /* Offcanvas cart */
-
 /* Overlay */
 .offcanvas-overlay {
   position: fixed;
@@ -716,7 +697,6 @@ header {
 .offcanvas-overlay.show {
   display: block;
 }
-
 /* Overlay */
 
 .offcanvas-cart {
@@ -848,7 +828,6 @@ header {
   background-color: var(--green);
   color: white;
 }
-
 /* Offcanvas cart */
 
 /* General button */
@@ -873,25 +852,18 @@ header {
   color: var(--white);
 }
 
-/* Trạng thái khi bấm */
 .btn-primary:active {
   background-color: #3e3e3e;
-  /* Tối hơn hover một chút */
   transform: scale(0.95);
-  /* Hiệu ứng nhấn */
 }
 
-/* Trạng thái khi focus */
 .btn-primary:focus {
   outline: 3px solid rgba(40, 167, 69, 0.5);
-  /* Hiệu ứng focus */
 }
 
 .btn a {
   color: inherit;
-  /* Kế thừa màu chữ từ button */
   text-decoration: none;
-  /* Bỏ gạch chân */
 }
 
 /* Section title */
@@ -1006,7 +978,6 @@ header {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-
 /* Breadcrumb */
 
 /* Shipping area section */
@@ -1041,7 +1012,6 @@ header {
 .shipping-content .title {
   margin-bottom: 4px;
 }
-
 /* Shipping area section */
 
 /* Brand area */
@@ -1081,7 +1051,6 @@ header {
 .brand-item img {
   max-width: 100%;
 }
-
 /* Brand area */
 
 /* Product card */
@@ -1089,7 +1058,7 @@ header {
   padding: 5px;
 }
 
-/* ----- 1. Hiệu ứng đổi ảnh ----- */
+/* ----- Hiệu ứng đổi ảnh ----- */
 .product-image {
   position: relative;
   overflow: hidden;
@@ -1105,39 +1074,32 @@ header {
   top: 0;
   left: 0;
   opacity: 0;
-  /* Ẩn ảnh thứ 2 ban đầu */
   transition: opacity 0.3s ease-in-out;
 }
 
 .product-image:hover .primary-img {
   opacity: 0;
-  /* Ẩn ảnh đầu tiên khi hover */
 }
 
 .product-image:hover .secondary-img {
   opacity: 1;
-  /* Hiện ảnh thứ hai khi hover */
 }
 
-/* ----- 2. Hiệu ứng hiện .product-add-action từ trái sang phải ----- */
+/* ----- Hiệu ứng hiện .product-add-action từ trái sang phải ----- */
 .product-add-action {
   position: absolute;
   bottom: 0px;
   left: -100%;
-  /* Ban đầu nằm ngoài bên trái */
   transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
   opacity: 0;
-  /* Ban đầu ẩn đi */
 }
 
 .product-image:hover .product-add-action {
   left: 0;
-  /* Khi hover, đưa vào vị trí */
   opacity: 1;
-  /* Hiện ra dần */
 }
 
-/* ----- 3. Căn chỉnh icon ----- */
+/* ----- Căn chỉnh icon ----- */
 .product-add-action ul {
   list-style: none;
   display: flex;
@@ -1159,22 +1121,18 @@ header {
   transition: all 0.3s ease;
 }
 
-/* Khi hover vào .item-action, thay đổi màu nền + màu chữ */
 .product-add-action .item-action:hover {
   background-color: var(--green);
   border-color: var(--green);
   color: var(--white);
 }
 
-/* Bảo đảm thẻ a bên trong kế thừa màu khi hover vào item-action */
 .product-add-action .item-action:hover a {
   color: var(--white);
 }
 
-/* Loại bỏ hiệu ứng hover cũ trên a */
 .product-add-action .item-action a {
   color: inherit;
-  /* Kế thừa màu từ .item-action */
   text-decoration: none;
 }
 
@@ -1187,7 +1145,6 @@ header {
 .product-add-action .item-action.active a {
   color: var(--white);
 }
-
 
 .product-content {
   padding-top: 10px;
@@ -1387,7 +1344,6 @@ footer .content .row {
 .footer-contact-info .payment-method img {
   max-width: 100%;
 }
-
 /* Footer */
 
 /* Product detail */
@@ -1479,8 +1435,6 @@ footer .content .row {
 .size-option {
   padding-bottom: 30px;
 }
-
-
 
 .selector-title {
   border-top: 1px solid #e8e8e8;

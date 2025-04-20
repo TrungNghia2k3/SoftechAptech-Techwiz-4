@@ -54,7 +54,6 @@
         border-color 0.8s ease;
     opacity: 0;
     visibility: hidden;
-    /* thêm dòng này */
 }
 
 .accordion-item.active .accordion-body {
@@ -63,7 +62,6 @@
     border-color: #dee2e6;
     opacity: 1;
     visibility: visible;
-    /* hiện lại border bằng màu */
 }
 
 .login-form p {
@@ -159,7 +157,6 @@
 
 #ship-box-info.open {
     max-height: 1500px;
-    /* đủ lớn để hiển thị nội dung */
     opacity: 1;
     visibility: visible;
 }
