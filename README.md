@@ -10,9 +10,9 @@
 
 ## 🔧 Technologies Used
 
-- **HTML5**
-- **CSS3**
-- **JavaScript (Vanilla JS)**
+- **HTML**
+- **CSS**
+- **JavaScript**
 - **[Bootstrap Icons](https://icons.getbootstrap.com/)** – for stylish and modern icons
 
 ---
@@ -21,12 +21,6 @@
 
 Visit the live version here:  
 👉 [https://trungnghia2k3.github.io/SoftechAptech-Techwiz-4/](https://trungnghia2k3.github.io/SoftechAptech-Techwiz-4/)
-
----
-
-## 📸 Preview
-
-<img src="https://github.com/user-attachments/assets/7e7b5c8e-f1d5-446e-a085-49d2a888e30e" alt="certificate" width="100%" />
 
 ---
 
