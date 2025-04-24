@@ -72,6 +72,7 @@
 .tab-content .tab-pane {
   display: none;
   background-color: white;
+  overflow-x: auto;
 }
 
 .tab-pane.active {

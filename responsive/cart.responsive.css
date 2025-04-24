@@ -1,0 +1,52 @@
+/* Extra Small Devices (Mobile, <576px) */
+@media (max-width: 575.98px) {
+    .cart-table table thead {
+        display: none;
+    }
+
+    .cart-table table tbody tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cart-table td.product-thumbnail {
+        width: 100%;
+    }
+
+    .cart-update {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cart-update button {
+        margin-bottom: 10px;
+    }
+
+    .cart-checkout {
+        padding-top: 30px;
+        width: 100%;
+    }
+}
+
+/* Small Devices (≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+/* Medium Devices (≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .cart-area {
+        padding: 50px;
+    }
+}
+
+/* Large Devices (≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .cart-area {
+        padding: 50px;
+    }
+}
+
+/* Extra Large Devices (≥1200px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {}
+
+/* Extra Extra Large Devices (≥1400px) */
+@media (min-width: 1400px) {}

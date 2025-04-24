@@ -58,7 +58,7 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 9999;
+  z-index: 999;
 }
 
 .toast {
@@ -645,7 +645,7 @@ header {
   width: 100%;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 999;
+  z-index: 998;
   display: none;
   animation: slideDown 0.3s ease forwards;
 }
@@ -992,6 +992,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -1203,7 +1204,7 @@ footer .content {
 
 footer .content .row {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   width: 100%;
   gap: 30px;
 }
@@ -1241,6 +1242,8 @@ footer .content .row {
 
 .footer-widget-social {
   display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .footer-widget-social ul {
@@ -1262,13 +1265,17 @@ footer .content .row {
   line-height: 40px;
   text-align: center;
   font-size: 14px;
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .footer-widget-social ul li a:hover {
   background-color: var(--green);
   color: var(--white);
-  border: var(--green);
+  border-color: var(--green);
+  transition: all 0.3s ease 0s;
 }
 
 .footer-widget-item .footer-widget-title {

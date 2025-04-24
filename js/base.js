@@ -35,7 +35,9 @@ function handleStickyHeader() {
   const headerBottom = header.offsetTop + header.offsetHeight;
 
   // Nếu là thiết bị di động (<= 575.98px)
-  if (window.innerWidth <= 575.98) {
+  if (window.innerWidth <= 575.98 || 
+    (window.innerWidth >= 768 && window.innerWidth <= 991.98)|| 
+    (window.innerWidth >= 992 && window.innerWidth <= 1199.98)) {
     stickyHeader.style.display = "block";
     return;
   }

@@ -72,5 +72,5 @@
 .wishlist-table td button:hover {
   background: var(--green);
   color: white;
-  border: 1px solid var(--green);
+  border-color: var(--green);
 }

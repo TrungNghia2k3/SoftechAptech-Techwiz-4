@@ -1,0 +1,67 @@
+/* Extra Small Devices (Mobile, <576px) */
+@media (max-width: 575.98px) {
+    .about-content-area {
+        padding: 0 20px;
+    }
+
+    .video-introduction-area {
+        padding: 20px;
+    }
+
+    .video-introduction-area .content {
+        background-color: transparent;
+        box-shadow: none;
+        height: 360px;
+    }
+
+    .team-area {
+        padding: 20px;
+    }
+
+    .content .team-item-list {
+        gap: 20px;
+    }
+
+    .team-item-list .team-item {
+        width: 90%;
+    }
+}
+
+/* Small Devices (≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+/* Medium Devices (≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .about-content-area {
+        padding: 0 20px;
+    }
+
+    .video-introduction-area {
+        padding: 20px;
+    }
+
+    .team-area {
+        padding: 20px;
+    }
+}
+
+/* Large Devices (≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .about-content-area {
+        padding: 0 20px;
+    }
+
+    .video-introduction-area {
+        padding: 20px;
+    }
+
+    .team-area {
+        padding: 20px;
+    }
+}
+
+/* Extra Large Devices (≥1200px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {}
+
+/* Extra Extra Large Devices (≥1400px) */
+@media (min-width: 1400px) {}

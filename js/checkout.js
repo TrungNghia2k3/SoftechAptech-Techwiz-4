@@ -21,7 +21,7 @@ async function renderOrderTable() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   const tbody = document.getElementById("order-tbody");
-  const subtotalElement = document.getElementById("cart-subtotal");
+  // const subtotalElement = document.getElementById("cart-subtotal");
   const totalElement = document.getElementById("order-total");
 
   let subtotal = 0;
@@ -48,8 +48,8 @@ async function renderOrderTable() {
   });
 
   tbody.innerHTML = html;
-  subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
-  totalElement.textContent = `$${subtotal.toFixed(2)}`; // Giả sử không có thêm phí vận chuyển
+  // subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+  totalElement.textContent = `$${subtotal.toFixed(2)}`;
 }
 
 document.addEventListener("DOMContentLoaded", renderOrderTable);

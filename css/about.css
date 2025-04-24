@@ -139,6 +139,7 @@
 .content .team-item-list {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .padding-top-38px {
