@@ -1,14 +1,109 @@
 /* Extra Small Devices (Mobile, <576px) */
-@media (max-width: 575.98px) {}
+@media (max-width: 575.98px) {
+    .product-detail-area {
+        padding: 50px 0;
+    }
+
+    .product-detail-wrapper {
+        flex-direction: column;
+    }
+
+    .product-detail-content {
+        padding-top: 48px !important;
+    }
+
+    .selector-title {
+        padding: 0;
+    }
+
+    .service-item-wrap {
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-item-wrap .service-item:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .product-tab-content {
+        padding: 0 15px;
+    }
+
+    .blog-comment .heading {
+        margin-bottom: 30px;
+    }
+
+    .blog-comment-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .blog-comment-content .user-comment {
+        width: 100%;
+    }
+
+    .blog-comment-content {
+        width: 100%;
+        margin-left: 0px;
+    }
+}
 
 /* Small Devices (≥576px) */
 @media (min-width: 576px) and (max-width: 767.98px) {}
 
 /* Medium Devices (≥768px) */
-@media (min-width: 768px) and (max-width: 991.98px) {}
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .product-detail-area .content {
+        padding: 0 20px;
+    }
+
+    .product-detail-wrapper {
+        flex-direction: column;
+    }
+
+    .product-detail-image img {
+        width: 70%;
+        display: flex;
+        margin: auto;
+    }
+
+    .product-detail-content {
+        padding-top: 48px !important;
+    }
+
+    .product-tab-content {
+        padding: 0 20px;
+    }
+}
 
 /* Large Devices (≥992px) */
-@media (min-width: 992px) and (max-width: 1199.98px) {}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .product-detail-area .content {
+        padding: 0 20px;
+    }
+
+    .product-detail-wrapper {
+        flex-direction: column;
+    }
+
+    .product-detail-image img {
+        width: 60%;
+        display: flex;
+        margin: auto;
+    }
+
+    .product-detail-content {
+        padding-top: 48px !important;
+    }
+
+    .product-tab-content {
+        padding: 0 20px;
+    }
+}
 
 /* Extra Large Devices (≥1200px) */
 @media (min-width: 1200px) and (max-width: 1399.98px) {}
